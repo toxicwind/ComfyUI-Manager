@@ -337,7 +337,7 @@ def __win_check_git_pull(path):
     process.wait()
 
 
-def execute_install_script(url, repo_path, lazy_mode=False):
+def execute_install_script(url, repo_path, lazy_mode=False, instant_execution=False):
     install_script_path = os.path.join(repo_path, "install.py")
     requirements_path = os.path.join(repo_path, "requirements.txt")
 
@@ -353,12 +353,12 @@ def execute_install_script(url, repo_path, lazy_mode=False):
                     if package_name:
                         install_cmd = [sys.executable, "-m", "pip", "install", package_name]
                         if package_name.strip() != "":
-                            try_install_script(url, repo_path, install_cmd)
+                            try_install_script(url, repo_path, install_cmd, instant_execution=instant_execution)
 
         if os.path.exists(install_script_path):
             print(f"Install: install script")
             install_cmd = [sys.executable, "install.py"]
-            try_install_script(url, repo_path, install_cmd)
+            try_install_script(url, repo_path, install_cmd, instant_execution=instant_execution)
 
     return True
 
@@ -466,7 +466,7 @@ def is_valid_url(url):
         return False
 
 
-def gitclone_install(files):
+def gitclone_install(files, instant_execution=False):
     print(f"install: {files}")
     for url in files:
         if not is_valid_url(url):
@@ -481,7 +481,7 @@ def gitclone_install(files):
             repo_path = os.path.join(custom_nodes_path, repo_name)
 
             # Clone the repository from the remote URL
-            if platform.system() == 'Windows':
+            if not instant_execution and platform.system() == 'Windows':
                 res = manager_funcs.run_script([sys.executable, git_script_path, "--clone", custom_nodes_path, url])
                 if res != 0:
                     return False
@@ -490,7 +490,7 @@ def gitclone_install(files):
                 repo.git.clear_cache()
                 repo.close()
 
-            if not execute_install_script(url, repo_path):
+            if not execute_install_script(url, repo_path, instant_execution=instant_execution):
                 return False
 
         except Exception as e:
@@ -566,13 +566,17 @@ def is_file_created_within_one_day(file_path):
     return time_difference <= 86400
 
 
-async def get_data_by_mode(mode, filename):
+async def get_data_by_mode(mode, filename, channel_url=None):
     try:
         if mode == "local":
             uri = os.path.join(comfyui_manager_path, filename)
             json_obj = await get_data(uri)
         else:
-            uri = get_config()['channel_url'] + '/' + filename
+            if channel_url is None:
+                uri = get_config()['channel_url'] + '/' + filename
+            else:
+                uri = channel_url + '/' + filename
+
             cache_uri = str(simple_hash(uri))+'_'+filename
             cache_uri = os.path.join(cache_dir, cache_uri)
 
@@ -708,7 +712,7 @@ def gitclone_set_active(files, is_disable):
             dir_name = os.path.splitext(os.path.basename(url))[0].replace(".git", "")
             dir_path = os.path.join(custom_nodes_path, dir_name)
 
-            # safey check
+            # safety check
             if dir_path == '/' or dir_path[1:] == ":/" or dir_path == '':
                 print(f"{action_name}(git-clone) error: invalid path '{dir_path}' for '{url}'")
                 return False
@@ -739,7 +743,7 @@ def gitclone_set_active(files, is_disable):
     return True
 
 
-def gitclone_update(files):
+def gitclone_update(files, instant_execution=False):
     import os
 
     print(f"Update: {files}")
@@ -751,8 +755,12 @@ def gitclone_update(files):
             repo_path = os.path.join(custom_nodes_path, repo_name)
             git_pull(repo_path)
 
-            if not execute_install_script(url, repo_path, lazy_mode=True):
-                return False
+            if instant_execution:
+                if not execute_install_script(url, repo_path, lazy_mode=False, instant_execution=True):
+                    return False
+            else:
+                if not execute_install_script(url, repo_path, lazy_mode=True):
+                    return False
 
         except Exception as e:
             print(f"Update(git-clone) error: {url} / {e}", file=sys.stderr)
