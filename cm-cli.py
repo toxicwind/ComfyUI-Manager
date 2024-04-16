@@ -26,7 +26,7 @@ if len(sys.argv) < 3:
     print(f"\npython cm-cli.py [options]\n"
           f"OPTIONS:"
           f"    [install|uninstall|update|disable|enable|cancel] ?[node_name ...]\n"
-          f"    show [installed|not-installed|disabled|all]\n")
+          f"    show [installed|enabled|not-installed|disabled|all]\n")
     exit(-1)
 
 
@@ -138,28 +138,31 @@ def disable_node(node_name):
         print(f"WARN: '{node_path}' is not installed.")
 
 
-def show_list(kind):
+def show_list(kind, simple=False):
     for k, v in custom_node_map.items():
         node_path = os.path.join(custom_nodes_path, k)
-        disable_node_path = node_path+'.disabled'
 
-        prefix = None
         states = set()
         if os.path.exists(node_path):
-            prefix = '[  INSTALLED  ] '
+            prefix = '[    ENABLED    ] '
             states.add('installed')
+            states.add('enabled')
             states.add('all')
         elif os.path.exists(node_path+'.disabled'):
-            prefix = '[   DISABLED  ] '
+            prefix = '[    DISABLED   ] '
+            states.add('installed')
             states.add('disabled')
             states.add('all')
         else:
-            prefix = '[NOT INSTALLED] '
+            prefix = '[ NOT INSTALLED ] '
             states.add('not-installed')
             states.add('all')
 
         if kind in states:
-            print(f"{prefix} {k}")
+            if simple:
+                print(f"{k:50}")
+            else:
+                print(f"{prefix} {k:50}(author: {v['author']})")
 
 
 def cancel():
@@ -200,6 +203,9 @@ elif op == 'enable':
 
 elif op == 'show':
     show_list(sys.argv[2])
+
+elif op == 'simple-show':
+    show_list(sys.argv[2], True)
 
 elif op == 'cancel':
     cancel()
