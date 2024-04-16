@@ -23,10 +23,12 @@ restore_snapshot_path = os.path.join(startup_script_path, "restore-snapshot.json
 
 
 if len(sys.argv) < 3:
-    print(f"\npython cm-cli.py [options]\n"
-          f"OPTIONS:"
-          f"    [install|uninstall|update|disable|enable|cancel] ?[node_name ...]\n"
-          f"    show [installed|enabled|not-installed|disabled|all]\n")
+    print(f"\npython cm-cli.py [OPTIONS]\n"
+          f"OPTIONS:\n"
+          f"    [install|uninstall|update|disable|enable] node_name ... ?[--channel <channel name>] ?[--mode [remote|local|cache]]\n"
+          f"    [simple-show|show] [installed|enabled|not-installed|disabled|all]\n"
+          f"    [save-snapshot|restore-snapshot] <snapshot>\n"
+          f"    clear\n")
     exit(-1)
 
 
@@ -207,6 +209,6 @@ elif op == 'show':
 elif op == 'simple-show':
     show_list(sys.argv[2], True)
 
-elif op == 'cancel':
+elif op == 'clear':
     cancel()
 
