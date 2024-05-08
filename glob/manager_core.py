@@ -22,7 +22,7 @@ sys.path.append(glob_path)
 import cm_global
 from manager_util import *
 
-version = [2, 24, 1]
+version = [2, 27, 2]
 version_str = f"V{version[0]}.{version[1]}" + (f'.{version[2]}' if len(version) > 2 else '')
 
 comfyui_manager_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
@@ -180,8 +180,7 @@ class ManagerFuncs:
             print(f"[ComfyUI-Manager] Unexpected behavior: `{cmd}`")
             return 0
 
-        out = subprocess.check_call(cmd, cwd=cwd)
-        print(out)
+        subprocess.check_call(cmd, cwd=cwd)
 
         return 0
 
@@ -313,7 +312,7 @@ def __win_check_git_update(path, do_fetch=False, do_update=False):
     else:
         command = [sys.executable, git_script_path, "--check", path]
 
-    process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=custom_nodes_path)
     output, _ = process.communicate()
     output = output.decode('utf-8').strip()
 
@@ -365,7 +364,7 @@ def __win_check_git_update(path, do_fetch=False, do_update=False):
 
 def __win_check_git_pull(path):
     command = [sys.executable, git_script_path, "--pull", path]
-    process = subprocess.Popen(command)
+    process = subprocess.Popen(command, cwd=custom_nodes_path)
     process.wait()
 
 
@@ -514,7 +513,7 @@ def gitclone_install(files, instant_execution=False, msg_prefix=''):
 
             # Clone the repository from the remote URL
             if not instant_execution and platform.system() == 'Windows':
-                res = manager_funcs.run_script([sys.executable, git_script_path, "--clone", custom_nodes_path, url])
+                res = manager_funcs.run_script([sys.executable, git_script_path, "--clone", custom_nodes_path, url], cwd=custom_nodes_path)
                 if res != 0:
                     return False
             else:
@@ -599,6 +598,9 @@ def is_file_created_within_one_day(file_path):
 
 
 async def get_data_by_mode(mode, filename, channel_url=None):
+    if channel_url in get_channel_dict():
+        channel_url = get_channel_dict()[channel_url]
+
     try:
         if mode == "local":
             uri = os.path.join(comfyui_manager_path, filename)
@@ -855,6 +857,7 @@ def update_path(repo_path, instant_execution=False):
     else:
         return "skipped"
 
+
 def lookup_customnode_by_url(data, target):
     for x in data['custom_nodes']:
         if target in x['files']:
@@ -867,6 +870,17 @@ def lookup_customnode_by_url(data, target):
             return x
 
     return None
+
+
+def simple_check_custom_node(url):
+    dir_name = os.path.splitext(os.path.basename(url))[0].replace(".git", "")
+    dir_path = os.path.join(custom_nodes_path, dir_name)
+    if os.path.exists(dir_path):
+        return 'installed'
+    elif os.path.exists(dir_path+'.disabled'):
+        return 'disabled'
+
+    return 'not-installed'
 
 
 def check_a_custom_node_installed(item, do_fetch=False, do_update_check=True, do_update=False):
@@ -927,6 +941,24 @@ def check_a_custom_node_installed(item, do_fetch=False, do_update_check=True, do
             item['installed'] = 'False'
 
 
+def get_installed_pip_packages():
+    # extract pip package infos
+    pips = subprocess.check_output([sys.executable, '-m', 'pip', 'freeze'], text=True).split('\n')
+
+    res = {}
+    for x in pips:
+        if x.strip() == "":
+            continue
+
+        if ' @ ' in x:
+            spec_url = x.split(' @ ')
+            res[spec_url[0]] = spec_url[1]
+        else:
+            res[x] = ""
+
+    return res
+
+
 def get_current_snapshot():
     # Get ComfyUI hash
     repo_path = comfy_path
@@ -976,10 +1008,13 @@ def get_current_snapshot():
 
             file_custom_nodes.append(item)
 
+    pip_packages = get_installed_pip_packages()
+
     return {
         'comfyui': comfyui_commit_hash,
         'git_custom_nodes': git_custom_nodes,
         'file_custom_nodes': file_custom_nodes,
+        'pips': pip_packages,
     }
 
 
@@ -1008,4 +1043,116 @@ def save_snapshot_with_postfix(postfix, path=None):
             yaml.dump(snapshot, yaml_file, allow_unicode=True)
 
         return path
+
+
+async def extract_nodes_from_workflow(filepath, mode='local', channel_url='default'):
+    # prepare json data
+    workflow = None
+    if filepath.endswith('.json'):
+        with open(filepath, "r", encoding="UTF-8", errors="ignore") as json_file:
+            try:
+                workflow = json.load(json_file)
+            except:
+                print(f"Invalid workflow file: {filepath}")
+                exit(-1)
+
+    elif filepath.endswith('.png'):
+        from PIL import Image
+        with Image.open(filepath) as img:
+            if 'workflow' not in img.info:
+                print(f"The specified .png file doesn't have a workflow: {filepath}")
+                exit(-1)
+            else:
+                try:
+                    workflow = json.loads(img.info['workflow'])
+                except:
+                    print(f"This is not a valid .png file containing a ComfyUI workflow: {filepath}")
+                    exit(-1)
+
+    if workflow is None:
+        print(f"Invalid workflow file: {filepath}")
+        exit(-1)
+
+    # extract nodes
+    used_nodes = set()
+
+    def extract_nodes(sub_workflow):
+        for x in sub_workflow['nodes']:
+            node_name = x.get('type')
+
+            # skip virtual nodes
+            if node_name in ['Reroute', 'Note']:
+                continue
+
+            if node_name is not None and not node_name.startswith('workflow/'):
+                used_nodes.add(node_name)
+
+    if 'nodes' in workflow:
+        extract_nodes(workflow)
+
+        if 'extra' in workflow:
+            if 'groupNodes' in workflow['extra']:
+                for x in workflow['extra']['groupNodes'].values():
+                    extract_nodes(x)
+
+    # lookup dependent custom nodes
+    ext_map = await get_data_by_mode(mode, 'extension-node-map.json', channel_url)
+
+    rext_map = {}
+    preemption_map = {}
+    patterns = []
+    for k, v in ext_map.items():
+        if k == 'https://github.com/comfyanonymous/ComfyUI':
+            for x in v[0]:
+                if x not in preemption_map:
+                    preemption_map[x] = []
+
+                preemption_map[x] = k
+            continue
+
+        for x in v[0]:
+            if x not in rext_map:
+                rext_map[x] = []
+
+            rext_map[x].append(k)
+
+        if 'preemptions' in v[1]:
+            for x in v[1]['preemptions']:
+                if x not in preemption_map:
+                    preemption_map[x] = []
+
+                preemption_map[x] = k
+
+        if 'nodename_pattern' in v[1]:
+            patterns.append((v[1]['nodename_pattern'], k))
+
+    # identify used extensions
+    used_exts = set()
+    unknown_nodes = set()
+
+    for node_name in used_nodes:
+        ext = preemption_map.get(node_name)
+
+        if ext is None:
+            ext = rext_map.get(node_name)
+            if ext is not None:
+                ext = ext[0]
+
+        if ext is None:
+            for pat_ext in patterns:
+                if re.search(pat_ext[0], node_name):
+                    ext = pat_ext[1]
+                    break
+
+        if ext == 'https://github.com/comfyanonymous/ComfyUI':
+            pass
+        elif ext is not None:
+            if 'Fooocus' in ext:
+                print(f">> {node_name}")
+
+            used_exts.add(ext)
+        else:
+            unknown_nodes.add(node_name)
+
+    return used_exts, unknown_nodes
 
