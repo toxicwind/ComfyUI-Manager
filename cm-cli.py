@@ -6,6 +6,8 @@ import json
 import asyncio
 import subprocess
 import shutil
+import concurrent
+import threading
 
 sys.path.append(os.path.dirname(__file__))
 sys.path.append(os.path.join(os.path.dirname(__file__), "glob"))
@@ -252,6 +254,10 @@ def load_custom_nodes():
                 repo_name = y.split('/')[-1]
                 res[repo_name] = x
 
+        if 'id' in x:
+            if x['id'] not in res:
+                res[x['id']] = x
+
     return res
 
 
@@ -280,14 +286,14 @@ custom_node_map = load_custom_nodes()
 
 
 def lookup_node_path(node_name, robust=False):
-    # Currently, the node_name is used directly as the node_path, but in the future, I plan to allow nicknames.
-
     if '..' in node_name:
         print(f"ERROR: invalid node name '{node_name}'")
         exit(-1)
 
     if node_name in custom_node_map:
-        node_path = os.path.join(custom_nodes_path, node_name)
+        node_url = custom_node_map[node_name]['files'][0]
+        repo_name = node_url.split('/')[-1]
+        node_path = os.path.join(custom_nodes_path, repo_name)
         return node_path, custom_node_map[node_name]
     elif robust:
         node_path = os.path.join(custom_nodes_path, node_name)
@@ -369,9 +375,55 @@ def update_node(node_name, is_all=False, cnt_msg=''):
     files = node_item['files'] if node_item is not None else [node_path]
 
     res = core.gitclone_update(files, skip_script=True, msg_prefix=f"[{cnt_msg}] ")
-    post_install(node_path)
+
     if not res:
-        print(f"ERROR: An error occurred while uninstalling '{node_name}'.")
+        print(f"ERROR: An error occurred while updating '{node_name}'.")
+        return None
+
+    return node_path
+
+
+def update_parallel():
+    global nodes
+
+    is_all = False
+    if 'all' in nodes:
+        is_all = True
+        nodes = [x for x in custom_node_map.keys() if os.path.exists(os.path.join(custom_nodes_path, x)) or os.path.exists(os.path.join(custom_nodes_path, x) + '.disabled')]
+
+    nodes = [x for x in nodes if x.lower() not in ['comfy', 'comfyui', 'all']]
+
+    total = len(nodes)
+
+    lock = threading.Lock()
+    processed = []
+
+    i = 0
+
+    def process_custom_node(x):
+        nonlocal i
+        nonlocal processed
+
+        with lock:
+            i += 1
+
+        try:
+            node_path = update_node(x, is_all=is_all, cnt_msg=f'{i}/{total}')
+            with lock:
+                processed.append(node_path)
+        except Exception as e:
+            print(f"ERROR: {e}")
+            traceback.print_exc()
+
+    with concurrent.futures.ThreadPoolExecutor(4) as executor:
+        for item in nodes:
+            executor.submit(process_custom_node, item)
+
+    i = 1
+    for node_path in processed:
+        print(f"[{i}/{total}] Post update: {node_path}")
+        post_install(node_path)
+        i += 1
 
 
 def update_comfyui():
@@ -441,7 +493,8 @@ def show_list(kind, simple=False):
             if simple:
                 print(f"{k:50}")
             else:
-                print(f"{prefix} {k:50}(author: {v['author']})")
+                short_id = v.get('id', "")
+                print(f"{prefix} {k:50} {short_id:20} (author: {v['author']})")
 
     # unregistered nodes
     candidates = os.listdir(os.path.realpath(custom_nodes_path))
@@ -473,7 +526,7 @@ def show_list(kind, simple=False):
                 if simple:
                     print(f"{k:50}")
                 else:
-                    print(f"{prefix} {k:50}(author: N/A)")
+                    print(f"{prefix} {k:50} {'':20} (author: N/A)")
 
 
 def show_snapshot(simple_mode=False):
@@ -605,7 +658,7 @@ elif op == 'update':
             update_comfyui()
             break
 
-    for_each_nodes(update_node, allow_all=True)
+    update_parallel()
 
 elif op == 'disable':
     if 'all' in nodes:

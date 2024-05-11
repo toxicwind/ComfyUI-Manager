@@ -8,10 +8,18 @@
             "install_type": "git-clone",
             "description": "If you see this message, your ComfyUI-Manager is outdated.\nDev channel provides only the list of the developing nodes. If you want to find the complete node list, please go to the Default channel."
         },
-
-
         
-
+        {
+            "author": "huchenlei",
+            "title": "ComfyUI-IC-Light",
+            "id": "ic-light-huchenlei",
+            "reference": "https://github.com/huchenlei/ComfyUI-IC-Light",
+            "files": [
+                "https://github.com/huchenlei/ComfyUI-IC-Light"
+            ],
+            "install_type": "git-clone",
+            "description": "ComfyUI native implementation of [a/IC-Light](https://github.com/lllyasviel/IC-Light). [w/It is not possible to install both because kijai's ComfyUI-IC-Light and another repository have the same name.]"
+        },
         {
             "author": "Levy1417",
             "title": "Universal-Data-Processing-Kit [UNSAFE]",
