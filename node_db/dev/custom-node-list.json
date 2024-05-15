@@ -10,15 +10,66 @@
         },
         
         {
-            "author": "huchenlei",
-            "title": "ComfyUI-IC-Light",
-            "id": "ic-light-huchenlei",
-            "reference": "https://github.com/huchenlei/ComfyUI-IC-Light",
+            "author": "tachyon-beep",
+            "title": "comfyui-simplefeed [UNSAFE]",
+            "reference": "https://github.com/tachyon-beep/comfyui-simplefeed",
             "files": [
-                "https://github.com/huchenlei/ComfyUI-IC-Light"
+                "https://github.com/tachyon-beep/comfyui-simplefeed"
             ],
             "install_type": "git-clone",
-            "description": "ComfyUI native implementation of [a/IC-Light](https://github.com/lllyasviel/IC-Light). [w/It is not possible to install both because kijai's ComfyUI-IC-Light and another repository have the same name.]"
+            "description": "A simple image feed for comfyUI which is easily configurable and easily extensible.\nUse the filter button to select which nodes write to the feed. Under settings, there are options that allow you: Position the feed. Set a max iamge count for the feed. Set oldest to newest or newest to oldest."
+        },
+        {
+            "author": "liusida",
+            "title": "ComfyUI-Sida-Remove-Image [UNSAFE]",
+            "reference": "https://github.com/liusida/ComfyUI-Sida-Remove-Image",
+            "files": [
+                "https://github.com/liusida/ComfyUI-Sida-Remove-Image"
+            ],
+            "install_type": "git-clone",
+            "description": "Nodes: LoadImageWithPrivacy, RemoveImage.[w/This extension is not secure because it provides the capability to delete files from arbitrary paths.]"
+        },
+        {
+            "author": "shadowcz007",
+            "title": "ComfyUI-PuLID [TEST]",
+            "reference": "https://github.com/shadowcz007/ComfyUI-PuLID-Test",
+            "files": [
+                "https://github.com/shadowcz007/ComfyUI-PuLID-Test"
+            ],
+            "install_type": "git-clone",
+            "description": "[a/PuLID](https://github.com/ToTheBeginning/PuLID) ComfyUI native implementation."
+        },
+        {
+            "author": "sangeet",
+            "title": "comfyui-testui [TEST]",
+            "reference": "https://github.com/sangeet/comfyui-testui",
+            "files": [
+                "https://github.com/sangeet/comfyui-testui"
+            ],
+            "install_type": "git-clone",
+            "description": "Simple Frontend For ComfyUI workflow"
+        },
+        {
+            "author": "Elawphant",
+            "title": "ComfyUI-MusicGen [WIP]",
+            "id": "musicgen",
+            "reference": "https://github.com/Elawphant/ComfyUI-MusicGen",
+            "files": [
+                "https://github.com/Elawphant/ComfyUI-MusicGen"
+            ],
+            "install_type": "git-clone",
+            "description": "ComfyUI for Meta MusicGen."
+        },
+        {
+            "author": "jtscmw01",
+            "title": "ComfyUI-DiffBIR",
+            "id": "diffbir",
+            "reference": "https://github.com/jtscmw01/ComfyUI-DiffBIR",
+            "files": [
+                "https://github.com/jtscmw01/ComfyUI-DiffBIR"
+            ],
+            "install_type": "git-clone",
+            "description": "This extension provides [a/DiffBIR](https://github.com/XPixelGroup/DiffBIR) feature."
         },
         {
             "author": "Levy1417",
