@@ -9,6 +9,81 @@
             "description": "If you see this message, your ComfyUI-Manager is outdated.\nDev channel provides only the list of the developing nodes. If you want to find the complete node list, please go to the Default channel."
         },
         
+
+
+        {
+            "author": "Quasimondo",
+            "title": "ComfyUI-QuasimondoNodes [WIP]",
+            "id": "quasimondo-nodes",
+            "reference": "https://github.com/Quasimondo/ComfyUI-QuasimondoNodes",
+            "files": [
+                "https://github.com/Quasimondo/ComfyUI-QuasimondoNodes"
+            ],
+            "install_type": "git-clone",
+            "description": "Nodes:Custom Shader, Spring Mesh"
+        },
+        {
+            "author": "TSFSean",
+            "title": "ComfyUI-TSFNodes",
+            "id": "tsfnodes",
+            "reference": "https://github.com/TSFSean/ComfyUI-TSFNodes",
+            "files": [
+                "https://github.com/TSFSean/ComfyUI-TSFNodes"
+            ],
+            "install_type": "git-clone",
+            "description": "Nodes:GyroOSC"
+        },
+        {
+            "author": "blib-la",
+            "title": "ComfyUI-Captain-Extensions",
+            "id": "captain",
+            "reference": "https://github.com/blib-la/ComfyUI-Captain-Extensions",
+            "files": [
+                "https://github.com/blib-la/ComfyUI-Captain-Extensions"
+            ],
+            "install_type": "git-clone",
+            "description": "ComfyUI extensions for better [a/Captain](https://github.com/blib-la/captain) integration."
+        },
+        {
+            "author": "ejektaflex",
+            "title": "ComfyUI-Ty",
+            "reference": "https://github.com/ejektaflex/ComfyUI-Ty",
+            "files": [
+                "https://github.com/ejektaflex/ComfyUI-Ty"
+            ],
+            "install_type": "git-clone",
+            "description": "Nodes:Lora Block Weight Regex Loader"
+        },
+        {
+            "author": "88IO",
+            "title": "ComfyUI Image Reordering Plugins [WIP]",
+            "reference": "https://github.com/88IO/ComfyUI-ImageReorder",
+            "files": [
+                "https://github.com/88IO/ComfyUI-ImageReorder"
+            ],
+            "install_type": "git-clone",
+            "description": "A custom node reorder multiple image frames based on indexes or curves."
+        },
+        {
+            "author": "christian-byrne",
+            "title": "Python Interpreter ComfyUI Node [UNSAFE]",
+            "reference": "https://github.com/christian-byrne/python-interpreter-node",
+            "files": [
+                "https://github.com/christian-byrne/python-interpreter-node"
+            ],
+            "install_type": "git-clone",
+            "description": "For debugging, parsing data, generating random values, converting types, testing custom nodes faster.\nReference and use variables in the code using the same names as the inputs in the UI\nWrapper class around tensors with operator overloading for doing common image manipulation tasks.I might remove this aspect\n[w/This extension allows you to run programs through Python code in your workflow, which may not be secure. Use with caution.]"
+        },
+        {
+            "author": "sofakid",
+            "title": "dandy [UNSAFE]",
+            "reference": "https://github.com/sofakid/dandy",
+            "files": [
+                "https://github.com/sofakid/dandy"
+            ],
+            "install_type": "git-clone",
+            "description": "Dandy is a JavaScript bridge for ComfyUI. It includes everything you need to make JavaScript enabled extensions, or just load and code in little editor nodes right in ComfyUI.[w/This code can cause security issues because it allows for the execution of arbitrary JavaScript input.]"
+        },
         {
             "author": "tachyon-beep",
             "title": "comfyui-simplefeed [UNSAFE]",
