@@ -10,7 +10,50 @@
         },
         
 
-
+        {
+            "author": "githubYiheng",
+            "title": "comfyui_median_filter",
+            "id": "median-filter",
+            "reference": "https://github.com/githubYiheng/comfyui_median_filter",
+            "files": [
+                "https://github.com/githubYiheng/comfyui_median_filter"
+            ],
+            "install_type": "git-clone",
+            "description": "Nodes:Apply Median Filter. [w/This has been updated to be equivalent to the comfyui_kmeans_filter node. Mistake?]"
+        },
+        {
+            "author": "nat-chan",
+            "title": "comfyui-eval [UNSAFE]",
+            "id": "evalnode",
+            "reference": "https://github.com/nat-chan/comfyui-eval",
+            "files": [
+                "https://github.com/nat-chan/comfyui-eval"
+            ],
+            "install_type": "git-clone",
+            "description": "Nodes:EvalNode [w/Please do not use the node that executes arbitrary code and outputs in any type, as it is dangerous.]"
+        },
+        {
+            "author": "haofanwang",
+            "title": "ComfyUI-InstantStyle",
+            "id": "instantstyle",
+            "reference": "https://github.com/haofanwang/ComfyUI-InstantStyle",
+            "files": [
+                "https://github.com/haofanwang/ComfyUI-InstantStyle"
+            ],
+            "install_type": "git-clone",
+            "description": "Nodes:PromptLoader, BaseModelLoader, InstantStyleLoader, InstantStyleGenerationNode"
+        },
+        {
+            "author": "jp0215",
+            "title": "comfyUI_padding-resize_node",
+            "reference": "https://github.com/jp0215/comfyUI_padding-resize_node",
+            "files": [
+                "https://github.com/jp0215/comfyUI_padding-resize_node/raw/main/PaddingNode.py",
+                "https://github.com/jp0215/comfyUI_padding-resize_node/raw/main/ResizeNode.py"
+            ],
+            "install_type": "copy",
+            "description": "Padding image to 8x: input image and mask, if the side length is not an integer multiple of 8, expand the side length to the smallest multiple of 8 greater than the original side length. Output padding image and mask. Resize to the origin: input the generated image and the original image, crop the generated image to the size of the original image, output the cropped image."
+        },
         {
             "author": "Quasimondo",
             "title": "ComfyUI-QuasimondoNodes [WIP]",
