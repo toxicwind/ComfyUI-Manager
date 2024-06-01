@@ -11,6 +11,50 @@
         
 
         {
+            "author": "jtydhr88",
+            "title": "ComfyUI-InstantMesh [DEPRECATED]",
+            "id": "instant-mesh",
+            "reference": "https://github.com/jtydhr88/ComfyUI-InstantMesh",
+            "files": [
+                "https://github.com/jtydhr88/ComfyUI-InstantMesh"
+            ],
+            "install_type": "git-clone",
+            "description": "ComfyUI InstantMesh is custom nodes that running TencentARC/InstantMesh into ComfyUI, this extension depends on ComfyUI-3D-Pack. Please refer to Readme carefully to install.\nNOTE: This repo is archived due to ComfyUI-3D-Pack supports InstantMesh, please check 3D-Pack directly if you need it"
+        },
+        {
+            "author": "biegert",
+            "title": "CLIPSeg [NOT MAINTAINED]",
+            "id": "clipseg",
+            "reference": "https://github.com/biegert/ComfyUI-CLIPSeg",
+            "files": [
+                "https://github.com/biegert/ComfyUI-CLIPSeg/raw/main/custom_nodes/clipseg.py"
+            ],
+            "install_type": "copy",
+            "description": "The CLIPSeg node generates a binary mask for a given input image and text prompt."
+        },
+        {
+            "author": "tankucc1no",
+            "title": "ComfyUI-Dragdiffusion [REMOVED]",
+            "id": "dragdiffusion",
+            "reference": "https://github.com/tankucc1no/ComfyUI-Dragdiffusion",
+            "files": [
+                "https://github.com/tankucc1no/ComfyUI-Dragdiffusion"
+            ],
+            "install_type": "git-clone",
+            "description": "Implementation of [a/Dragdiffusion](https://github.com/Yujun-Shi/DragDiffusion) in ComfyUI."
+        },
+        {
+            "author": "AI2lab",
+            "title": "comfyUI-tool-2lab [REMOVED]",
+            "id": "tool2lab",
+            "reference": "https://github.com/AI2lab/comfyUI-tool-2lab",
+            "files": [
+                "https://github.com/AI2lab/comfyUI-tool-2lab"
+            ],
+            "install_type": "git-clone",
+            "description": "simple tool set for developing workflow and publish to web api server"
+        },
+        {
             "author": "wibur0620",
             "title": "ComfyUI Ollama (wibur) [REMOVED]",
             "id": "ollama-wibur",

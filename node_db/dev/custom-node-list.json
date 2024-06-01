@@ -8,8 +8,93 @@
             "install_type": "git-clone",
             "description": "If you see this message, your ComfyUI-Manager is outdated.\nDev channel provides only the list of the developing nodes. If you want to find the complete node list, please go to the Default channel."
         },
-        
 
+
+        {
+            "author": "LykosAI",
+            "title": "ComfyUI Nodes for Inference.Core",
+            "id": "inference-core",
+            "reference": "https://github.com/LykosAI/ComfyUI-Inference-Core-Nodes",
+            "files": [
+                "https://github.com/LykosAI/ComfyUI-Inference-Core-Nodes"
+            ],
+            "install_type": "git-clone",
+            "description": "Primary Nodes for Inference.Core and Stability Matrix. With a focus on not impacting startup performance and using fully qualified Node names. [w/This custom node is likely to conflict with many other nodes.]"
+        },
+        {
+            "author": "blepping",
+            "title": "comfyui_overly_complicated_sampling",
+            "reference": "https://github.com/blepping/comfyui_overly_complicated_sampling",
+            "files": [
+                  "https://github.com/blepping/comfyui_overly_complicated_sampling"
+            ],
+            "install_type": "git-clone",
+            "description": "Very unstable, experimental and mathematically unsound sampling for ComfyUI.\nCurrent status: In flux, not suitable for general use."
+        },
+        {
+            "author": "tracerstar",
+            "title": "comfyui-p5js-node",
+            "id": "p5js",
+            "reference": "https://github.com/tracerstar/comfyui-p5js-node",
+            "files": [
+                  "https://github.com/tracerstar/comfyui-p5js-node"
+            ],
+            "install_type": "git-clone",
+            "description": "A simple proof of concept node to pass a p5js canvas through ComfyUI for img2img generation use."
+        },
+        {
+            "author": "chaojie",
+            "title": "ComfyUI-mobvoi-openapi",
+            "id": "mobvoi-openapi",
+            "reference": "https://github.com/chaojie/ComfyUI-mobvoi-openapi",
+            "files": [
+                "https://github.com/chaojie/ComfyUI-mobvoi-openapi"
+            ],
+            "install_type": "git-clone",
+            "description": "Nodes:MobvoiOpenapiMetamanText, MobvoiOpenapiMetamanAudio, MobvoiOpenapiTts, HtmlViewer, OssUploadImage, OssUploadAudio"
+        },
+        {
+            "author": "immersiveexperience",
+            "title": "ie-comfyui-color-nodes",
+            "id": "ie-color-nodes",
+            "reference": "https://github.com/immersiveexperience/ie-comfyui-color-nodes",
+            "files": [
+                "https://github.com/immersiveexperience/ie-comfyui-color-nodes"
+            ],
+            "install_type": "git-clone",
+            "description": "Custom ComfyUI nodes for simple color correction."
+        },
+        {
+            "author": "beyastard",
+            "title": "ComfyUI_BeySoft",
+            "reference": "https://github.com/beyastard/ComfyUI_BeySoft",
+            "files": [
+                "https://github.com/beyastard/ComfyUI_BeySoft"
+            ],
+            "install_type": "git-clone",
+            "description": "Nodes:BeySoft"
+        },
+        {
+            "author": "christian-byrne",
+            "title": "🌌 Infinite Parallax Nodes [WIP]",
+            "reference": "https://github.com/christian-byrne/infinite-zoom-parallax-nodes",
+            "files": [
+                "https://github.com/christian-byrne/infinite-zoom-parallax-nodes"
+            ],
+            "install_type": "git-clone",
+            "description": "Nodes:Parallax Config, Load Parallax Frame, Save Parallax Object Layers, Layer Shifter for Parallax Outpainting, Save Parallax Frame, Shrink and Pad for Outpainting, Create Infinite Zoom Video"
+        },
+        {
+            "author": "flyingdogsoftware",
+            "title": "Gyre for ComfyUI",
+            "id": "gyre",
+            "reference": "https://github.com/flyingdogsoftware/gyre_for_comfyui",
+            "files": [
+                "https://github.com/flyingdogsoftware/gyre_for_comfyui"
+            ],
+            "install_type": "git-clone",
+            "description": "Nodes:GyreLoopStart, GyreLoopEnd, GyreIfElse"
+        },
         {
             "author": "githubYiheng",
             "title": "comfyui_median_filter",
