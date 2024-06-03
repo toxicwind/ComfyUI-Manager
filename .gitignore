@@ -1,6 +1,8 @@
 !/input/example.png
 !/web/extensions/core/
 !/web/extensions/logging.js.example
+**/*.py[cod]
+**/__pycache__/
 *.ckpt
 *.h5
 *.joblib
@@ -20,6 +22,7 @@
 .idea/
 .openart_key
 .tmp
+.vs
 .vscode/
 .youml
 /.vs
@@ -43,3 +46,4 @@ pip_overrides.json__pycache__/
 snapshots/**
 startup-scripts/**
 venv/
+workspace*/
