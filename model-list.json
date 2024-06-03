@@ -2665,6 +2665,141 @@
       "reference": "https://huggingface.co/TTPlanet/TTPLanet_SDXL_Controlnet_Tile_Realistic",
       "filename": "TTPLANET_Controlnet_Tile_realistic_v2_fp16.safetensors",
       "url": "https://huggingface.co/TTPlanet/TTPLanet_SDXL_Controlnet_Tile_Realistic/resolve/main/TTPLANET_Controlnet_Tile_realistic_v2_fp16.safetensors"
+    },
+
+    {
+      "name": "ViperYX/RGT_x2.pth",
+      "type": "RGT",
+      "base": "RGT",
+      "save_path": "RGT/RGT",
+      "description": "[180MB] RGT x2 upscale model for ComfyUI-RGT",
+      "reference": "https://huggingface.co/ViperYX/RGT/tree/main",
+      "filename": "RGT_x2.pth",
+      "url": "https://huggingface.co/ViperYX/RGT/resolve/main/RGT/RGT_x2.pth"
+    },
+    {
+      "name": "ViperYX/RGT_x3.pth",
+      "type": "RGT",
+      "base": "RGT",
+      "save_path": "RGT/RGT",
+      "description": "[180MB] RGT x3 upscale model for ComfyUI-RGT",
+      "reference": "https://huggingface.co/ViperYX/RGT/tree/main",
+      "filename": "RGT_x3.pth",
+      "url": "https://huggingface.co/ViperYX/RGT/resolve/main/RGT/RGT_x3.pth"
+    },
+    {
+      "name": "ViperYX/RGT_x4.pth",
+      "type": "RGT",
+      "base": "RGT",
+      "save_path": "RGT/RGT",
+      "description": "[180MB] RGT_S x4 upscale model for ComfyUI-RGT",
+      "reference": "https://huggingface.co/ViperYX/RGT/tree/main",
+      "filename": "RGT_x4.pth",
+      "url": "https://huggingface.co/ViperYX/RGT/resolve/main/RGT/RGT_x4.pth"
+    },
+
+    {
+      "name": "ViperYX/RGT_S_x2.pth",
+      "type": "RGT",
+      "base": "RGT",
+      "save_path": "RGT/RGT_S",
+      "description": "[135MB] RGT_S x2 upscale model for ComfyUI-RGT",
+      "reference": "https://huggingface.co/ViperYX/RGT/tree/main",
+      "filename": "RGT_S_x2.pth",
+      "url": "https://huggingface.co/ViperYX/RGT/resolve/main/RGT_S/RGT_S_x2.pth"
+    },
+    {
+      "name": "ViperYX/RGT_S_x3.pth",
+      "type": "RGT",
+      "base": "RGT",
+      "save_path": "RGT/RGT_S",
+      "description": "[136MB] RGT_S x3 upscale model for ComfyUI-RGT",
+      "reference": "https://huggingface.co/ViperYX/RGT/tree/main",
+      "filename": "RGT_S_x3.pth",
+      "url": "https://huggingface.co/ViperYX/RGT/resolve/main/RGT_S/RGT_S_x3.pth"
+    },
+    {
+      "name": "ViperYX/RGT_S_x4.pth",
+      "type": "RGT",
+      "base": "RGT",
+      "save_path": "RGT/RGT_S",
+      "description": "[136MB] RGT_S x4 upscale model for ComfyUI-RGT",
+      "reference": "https://huggingface.co/ViperYX/RGT/tree/main",
+      "filename": "RGT_S_x4.pth",
+      "url": "https://huggingface.co/ViperYX/RGT/resolve/main/RGT_S/RGT_S_x4.pth"
+    },
+
+    {
+      "name": "Doubiiu/ToonCrafter model checkpoint",
+      "type": "checkpoint",
+      "base": "ToonCrafter",
+      "save_path": "custom_nodes/ComfyUI-ToonCrafter/ToonCrafter/checkpoints/tooncrafter_512_interp_v1",
+      "description": "[10.5GB] ToonCrafter checkpoint model for ComfyUI-ToonCrafter",
+      "reference": "https://huggingface.co/Doubiiu/ToonCrafter/tree/main",
+      "filename": "model.ckpt",
+      "url": "https://huggingface.co/Doubiiu/ToonCrafter/resolve/main/model.ckpt"
+    },
+
+    {
+      "name": "xinsir/Controlnet-Scribble-Sdxl-1.0",
+      "type": "controlnet",
+      "base": "SDXL",
+      "save_path": "controlnet/SDXL/controlnet-scribble-sdxl-1.0",
+      "description": "[2.5GB] Controlnet SDXL Scribble model.",
+      "reference": "https://huggingface.co/xinsir/controlnet-scribble-sdxl-1.0",
+      "filename": "diffusion_pytorch_model.safetensors",
+      "url": "https://huggingface.co/xinsir/controlnet-scribble-sdxl-1.0/resolve/main/diffusion_pytorch_model.safetensors"
+    },
+    {
+      "name": "xinsir/Controlnet-Canny-Sdxl-1.0 (V2)",
+      "type": "controlnet",
+      "base": "SDXL",
+      "save_path": "controlnet/SDXL/controlnet-canny-sdxl-1.0",
+      "description": "[2.5GB] Controlnet SDXL Canny model.",
+      "reference": "https://huggingface.co/xinsir/controlnet-canny-sdxl-1.0",
+      "filename": "diffusion_pytorch_model_V2.safetensors",
+      "url": "https://huggingface.co/xinsir/controlnet-canny-sdxl-1.0/resolve/main/diffusion_pytorch_model_V2.safetensors"
+    },
+    {
+      "name": "xinsir/Controlnet-Openpose-Sdxl-1.0",
+      "type": "controlnet",
+      "base": "SDXL",
+      "save_path": "controlnet/SDXL/controlnet-openpose-sdxl-1.0",
+      "description": "[2.5GB] Controlnet SDXL Openpose model.",
+      "reference": "https://huggingface.co/xinsir/controlnet-openpose-sdxl-1.0",
+      "filename": "diffusion_pytorch_model.safetensors",
+      "url": "https://huggingface.co/xinsir/controlnet-openpose-sdxl-1.0/resolve/main/diffusion_pytorch_model.safetensors"
+    },
+    {
+      "name": "xinsir/Controlnet-Openpose-Sdxl-1.0 (Ver. twins)",
+      "type": "controlnet",
+      "base": "SDXL",
+      "save_path": "controlnet/SDXL/controlnet-openpose-sdxl-1.0",
+      "description": "[2.5GB] Controlnet SDXL Openpose model. (Ver. twins)",
+      "reference": "https://huggingface.co/xinsir/controlnet-openpose-sdxl-1.0",
+      "filename": "diffusion_pytorch_model_twins.safetensors",
+      "url": "https://huggingface.co/xinsir/controlnet-openpose-sdxl-1.0/resolve/main/diffusion_pytorch_model_twins.safetensors"
+    },
+    {
+      "name": "xinsir/CControlnet-Scribble-Sdxl-1.0-Anime",
+      "type": "controlnet",
+      "base": "SDXL",
+      "save_path": "controlnet/SDXL/controlnet-scribble-sdxl-1.0-anime",
+      "description": "[2.5GB] Controlnet SDXL Scribble model. (Ver. anime)",
+      "reference": "https://huggingface.co/xinsir/anime-painter",
+      "filename": "diffusion_pytorch_model.safetensors",
+      "url": "https://huggingface.co/xinsir/anime-painter/resolve/main/diffusion_pytorch_model.safetensors"
+    },
+
+    {
+      "name": "Kijai/ToonCrafter model checkpoint (interpolation fp16)",
+      "type": "checkpoint",
+      "base": "ToonCrafter",
+      "save_path": "checkpoints/ToonCrafter",
+      "description": "[5.25GB] ToonCrafter checkpoint model for ComfyUI-DynamiCrafterWrapper",
+      "reference": "https://huggingface.co/Kijai/DynamiCrafter_pruned",
+      "filename": "tooncrafter_512_interp-fp16.safetensors",
+      "url": "https://huggingface.co/Kijai/DynamiCrafter_pruned/resolve/main/tooncrafter_512_interp-fp16.safetensors"
     }
   ]
 }

@@ -1,6 +1,110 @@
 {
   "models": [
     {
+      "name": "Kijai/ToonCrafter model checkpoint (interpolation fp16)",
+      "type": "checkpoint",
+      "base": "ToonCrafter",
+      "save_path": "checkpoints/ToonCrafter",
+      "description": "[5.25GB] ToonCrafter checkpoint model for ComfyUI-DynamiCrafterWrapper",
+      "reference": "https://huggingface.co/Kijai/DynamiCrafter_pruned",
+      "filename": "tooncrafter_512_interp-fp16.safetensors",
+      "url": "https://huggingface.co/Kijai/DynamiCrafter_pruned/resolve/main/tooncrafter_512_interp-fp16.safetensors"
+    },
+
+    {
+      "name": "xinsir/Controlnet-Scribble-Sdxl-1.0",
+      "type": "controlnet",
+      "base": "SDXL",
+      "save_path": "controlnet/SDXL/controlnet-scribble-sdxl-1.0",
+      "description": "[2.5GB] Controlnet SDXL Scribble model.",
+      "reference": "https://huggingface.co/xinsir/controlnet-scribble-sdxl-1.0",
+      "filename": "diffusion_pytorch_model.safetensors",
+      "url": "https://huggingface.co/xinsir/controlnet-scribble-sdxl-1.0/resolve/main/diffusion_pytorch_model.safetensors"
+    },
+    {
+      "name": "xinsir/Controlnet-Canny-Sdxl-1.0 (V2)",
+      "type": "controlnet",
+      "base": "SDXL",
+      "save_path": "controlnet/SDXL/controlnet-canny-sdxl-1.0",
+      "description": "[2.5GB] Controlnet SDXL Canny model.",
+      "reference": "https://huggingface.co/xinsir/controlnet-canny-sdxl-1.0",
+      "filename": "diffusion_pytorch_model_V2.safetensors",
+      "url": "https://huggingface.co/xinsir/controlnet-canny-sdxl-1.0/resolve/main/diffusion_pytorch_model_V2.safetensors"
+    },
+    {
+      "name": "xinsir/Controlnet-Openpose-Sdxl-1.0",
+      "type": "controlnet",
+      "base": "SDXL",
+      "save_path": "controlnet/SDXL/controlnet-openpose-sdxl-1.0",
+      "description": "[2.5GB] Controlnet SDXL Openpose model.",
+      "reference": "https://huggingface.co/xinsir/controlnet-openpose-sdxl-1.0",
+      "filename": "diffusion_pytorch_model.safetensors",
+      "url": "https://huggingface.co/xinsir/controlnet-openpose-sdxl-1.0/resolve/main/diffusion_pytorch_model.safetensors"
+    },
+    {
+      "name": "xinsir/Controlnet-Openpose-Sdxl-1.0 (Ver. twins)",
+      "type": "controlnet",
+      "base": "SDXL",
+      "save_path": "controlnet/SDXL/controlnet-openpose-sdxl-1.0",
+      "description": "[2.5GB] Controlnet SDXL Openpose model. (Ver. twins)",
+      "reference": "https://huggingface.co/xinsir/controlnet-openpose-sdxl-1.0",
+      "filename": "diffusion_pytorch_model_twins.safetensors",
+      "url": "https://huggingface.co/xinsir/controlnet-openpose-sdxl-1.0/resolve/main/diffusion_pytorch_model_twins.safetensors"
+    },
+    {
+      "name": "xinsir/CControlnet-Scribble-Sdxl-1.0-Anime",
+      "type": "controlnet",
+      "base": "SDXL",
+      "save_path": "controlnet/SDXL/controlnet-scribble-sdxl-1.0-anime",
+      "description": "[2.5GB] Controlnet SDXL Scribble model. (Ver. anime)",
+      "reference": "https://huggingface.co/xinsir/anime-painter",
+      "filename": "diffusion_pytorch_model.safetensors",
+      "url": "https://huggingface.co/xinsir/anime-painter/resolve/main/diffusion_pytorch_model.safetensors"
+    },
+
+    {
+      "name": "Doubiiu/ToonCrafter model checkpoint",
+      "type": "checkpoint",
+      "base": "ToonCrafter",
+      "save_path": "custom_nodes/ComfyUI-ToonCrafter/ToonCrafter/checkpoints/tooncrafter_512_interp_v1",
+      "description": "[10.5GB] ToonCrafter checkpoint model for ComfyUI-ToonCrafter",
+      "reference": "https://huggingface.co/Doubiiu/ToonCrafter/tree/main",
+      "filename": "model.ckpt",
+      "url": "https://huggingface.co/Doubiiu/ToonCrafter/resolve/main/model.ckpt"
+    },
+
+    {
+      "name": "ViperYX/RGT_S_x2.pth",
+      "type": "RGT",
+      "base": "RGT",
+      "save_path": "RGT/RGT_S",
+      "description": "[135MB] RGT_S x2 upscale model for ComfyUI-RGT",
+      "reference": "https://huggingface.co/ViperYX/RGT/tree/main",
+      "filename": "RGT_S_x2.pth",
+      "url": "https://huggingface.co/ViperYX/RGT/resolve/main/RGT_S/RGT_S_x2.pth"
+    },
+    {
+      "name": "ViperYX/RGT_S_x3.pth",
+      "type": "RGT",
+      "base": "RGT",
+      "save_path": "RGT/RGT_S",
+      "description": "[136MB] RGT_S x3 upscale model for ComfyUI-RGT",
+      "reference": "https://huggingface.co/ViperYX/RGT/tree/main",
+      "filename": "RGT_S_x3.pth",
+      "url": "https://huggingface.co/ViperYX/RGT/resolve/main/RGT_S/RGT_S_x3.pth"
+    },
+    {
+      "name": "ViperYX/RGT_S_x4.pth",
+      "type": "RGT",
+      "base": "RGT",
+      "save_path": "RGT/RGT_S",
+      "description": "[136MB] RGT_S x4 upscale model for ComfyUI-RGT",
+      "reference": "https://huggingface.co/ViperYX/RGT/tree/main",
+      "filename": "RGT_S_x4.pth",
+      "url": "https://huggingface.co/ViperYX/RGT/resolve/main/RGT_S/RGT_S_x4.pth"
+    },
+
+    {
       "name": "TTPlanet/TTPLanet_SDXL_Controlnet_Tile_Realistic v2 (fp16)",
       "type": "controlnet",
       "base": "SDXL",
@@ -651,47 +755,6 @@
       "reference": "https://huggingface.co/h94/IP-Adapter-FaceID",
       "filename": "ip-adapter-faceid-plus_sd15_lora.safetensors",
       "url": "https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-plus_sd15_lora.safetensors"
-    },
-
-    {
-      "name": "ControlNet-HandRefiner-pruned (inpaint-depth-hand; fp16)",
-      "type": "controlnet",
-      "base": "SD1.5",
-      "save_path": "default",
-      "description": "This inpaint-depth controlnet model is specialized for the hand refiner.",
-      "reference": "https://huggingface.co/hr16/ControlNet-HandRefiner-pruned",
-      "filename": "control_sd15_inpaint_depth_hand_fp16.safetensors",
-      "url": "https://huggingface.co/hr16/ControlNet-HandRefiner-pruned/resolve/main/control_sd15_inpaint_depth_hand_fp16.safetensors"
-    },
-    {
-      "name": "stabilityai/stable-diffusion-x4-upscaler",
-      "type": "checkpoints",
-      "base": "upscale",
-      "save_path": "checkpoints/upscale",
-      "description": "[3.53GB] This upscaling model is a latent text-guided diffusion model and should be used with SD_4XUpscale_Conditioning and KSampler.",
-      "reference": "https://huggingface.co/stabilityai/stable-diffusion-x4-upscaler",
-      "filename": "x4-upscaler-ema.safetensors",
-      "url": "https://huggingface.co/stabilityai/stable-diffusion-x4-upscaler/resolve/main/x4-upscaler-ema.safetensors"
-    },
-    {
-      "name": "LDSR(Latent Diffusion Super Resolution)",
-      "type": "upscale",
-      "base": "upscale",
-      "save_path": "upscale_models/ldsr",
-      "description": "LDSR upscale model. Through the [a/ComfyUI-Flowty-LDSR](https://github.com/flowtyone/ComfyUI-Flowty-LDSR) extension, the upscale model can be utilized.",
-      "reference": "https://github.com/CompVis/latent-diffusion",
-      "filename": "last.ckpt",
-      "url": "https://heibox.uni-heidelberg.de/f/578df07c8fc04ffbadf3/?dl=1"
-    },
-    {
-      "name": "control_boxdepth_LooseControlfp16 (fp16)",
-      "type": "controlnet",
-      "base": "SD1.5",
-      "save_path": "default",
-      "description": "Loose ControlNet model",
-      "reference": "https://huggingface.co/ioclab/LooseControl_WebUICombine",
-      "filename": "control_boxdepth_LooseControlfp16.safetensors",
-      "url": "https://huggingface.co/ioclab/LooseControl_WebUICombine/resolve/main/control_boxdepth_LooseControlfp16.safetensors"
     }
   ]
 }

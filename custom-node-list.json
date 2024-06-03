@@ -47,6 +47,17 @@
             "description": "Nodes: ModelSamplerTonemapNoiseTest, TonemapNoiseWithRescaleCFG, ReferenceOnlySimple, RescaleClassifierFreeGuidanceTest, ModelMergeBlockNumber, ModelMergeSDXL, ModelMergeSDXLTransformers, ModelMergeSDXLDetailedTransformers."
         },
         {
+            "author": "comfyanonymous",
+            "title": "TensorRT Node for ComfyUI",
+            "id": "tensorrt",
+            "reference": "https://github.com/comfyanonymous/ComfyUI_TensorRT",
+            "files": [
+                "https://github.com/comfyanonymous/ComfyUI_TensorRT"
+            ],
+            "install_type": "git-clone",
+            "description": "This node enables the best performance on NVIDIA RTX™ Graphics Cards  (GPUs) for Stable Diffusion by leveraging NVIDIA TensorRT."
+        },
+        {
             "author": "Stability-AI",
             "title": "Stability API nodes for ComfyUI",
             "id": "sai-api",
@@ -1943,6 +1954,17 @@
             "description": "Bridge between ComfyUI and blender's ComfyUI-BlenderAI-node addon."
         },
         {
+            "author": "AIGODLIKE",
+            "title": "ComfyUI-ToonCrafter",
+            "id": "tooncrafter",
+            "reference": "https://github.com/AIGODLIKE/ComfyUI-ToonCrafter",
+            "files": [
+                "https://github.com/AIGODLIKE/ComfyUI-ToonCrafter"
+            ],
+            "install_type": "git-clone",
+            "description": "This project is used to enable [a/ToonCrafter](https://github.com/ToonCrafter/ToonCrafter) to be used in ComfyUI.\nYou can use it to achieve generative keyframe animation\nAnd use it in Blender for animation rendering and prediction"
+        },
+        {
             "author": "syllebra",
             "title": "BilboX's ComfyUI Custom Nodes",
             "id": "bilbox",
@@ -1999,14 +2021,14 @@
         },
         {
             "author": "laksjdjf",
-            "title": "attention-couple-ComfyUI",
-            "id": "attention-couple",
-            "reference": "https://github.com/laksjdjf/attention-couple-ComfyUI",
+            "title": "cgem156-ComfyUI🍌",
+            "id": "cgem156",
+            "reference": "https://github.com/laksjdjf/cgem156-ComfyUI",
             "files": [
-                "https://github.com/laksjdjf/attention-couple-ComfyUI"
+                "https://github.com/laksjdjf/cgem156-ComfyUI"
             ],
             "install_type": "git-clone",
-            "description": "Nodes:Attention couple. This is a custom node that manipulates region-specific prompts. While vanilla ComfyUI employs an area specification method based on latent couples, this node divides regions using attention layers within UNet."
+            "description": "The custom nodes of laksjdjf have been integrated into the node pack of cgem156🍌.\nNOTE:This includes the attention couple feature."
         },
         {
             "author": "laksjdjf",
@@ -2051,17 +2073,6 @@
             ],
             "install_type": "git-clone",
             "description": "Nodes:CLIP Text Encode (Batch), String Input, Batch String"
-        },
-        {
-            "author": "laksjdjf",
-            "title": "cgem156-ComfyUI🍌",
-            "id": "cgem156",
-            "reference": "https://github.com/laksjdjf/cgem156-ComfyUI",
-            "files": [
-                "https://github.com/laksjdjf/cgem156-ComfyUI"
-            ],
-            "install_type": "git-clone",
-            "description": "The custom nodes of laksjdjf have been integrated into the node pack of cgem156🍌."
         },
         {
             "author": "alsritter",
@@ -2840,7 +2851,7 @@
                 "https://github.com/kijai/ComfyUI-DynamiCrafterWrapper"
             ],
             "install_type": "git-clone",
-            "description": "Wrapper nodes to use DynamiCrafter image2video and frame interpolation models in ComfyUI"
+            "description": "Wrapper nodes to use DynamiCrafter image2video and frame interpolation models in ComfyUI\nAnd this extension supports ToonCrafter as well"
         },
         {
             "author": "kijai",
@@ -3980,6 +3991,17 @@
             ],
             "install_type": "git-clone",
             "description": "Prompt Visualization | Art Gallery\n[w/WARN: Installation requires 2GB of space, and it will involve a long download time.]"
+        },
+        {
+            "author": "ZHO-ZHO-ZHO",
+            "title": "ComfyUI-Animated-optical-illusions",
+            "id": "animated-optical-illusion",
+            "reference": "https://github.com/ZHO-ZHO-ZHO/ComfyUI-Animated-optical-illusions",
+            "files": [
+                "https://github.com/ZHO-ZHO-ZHO/ComfyUI-Animated-optical-illusions"
+            ],
+            "install_type": "git-clone",
+            "description": "Animated optical illusions in ComfyUI"
         },
         {
             "author": "kenjiqq",
@@ -6368,6 +6390,7 @@
         {
             "author": "dfl",
             "title": "ComfyUI-TCD-scheduler",
+            "id": "dfl-tcd",
             "reference": "https://github.com/dfl/comfyui-tcd-scheduler",
             "files": [
                 "https://github.com/dfl/comfyui-tcd-scheduler"
@@ -7441,6 +7464,16 @@
             "description": "Data Research And Manipulators Nodes for Model Trainers, Artists, Designers and Animators. Captions, Visualizer, Text Manipulator"
         },
         {
+            "author": "daxcay",
+            "title": "ComfyUI-NODEJS",
+            "reference": "https://github.com/daxcay/ComfyUI-NODEJS",
+            "files": [
+                "https://github.com/daxcay/ComfyUI-NODEJS"
+            ],
+            "install_type": "git-clone",
+            "description": "This node allows the execution of Node.js application within ComfyUI by leveraging the ComfyUI-NODEJS, which starts alongside ComfyUI and facilitates the installation of Node.js. The integration enables Python subprocesses to execute Node.js scripts."
+        },
+        {
             "author": "Seedsa",
             "title": "ComfyUI Fooocus Nodes",
             "id": "fooocus-nodes",
@@ -7515,6 +7548,18 @@
             ],
             "install_type": "git-clone",
             "description": "Bilateral Reference Network achieves SOTA result in multi Salient Object Segmentation dataset, this repo pack BiRefNet as ComfyUI nodes, and make this SOTA model easier use for everyone."
+        },
+        {
+            "author": "viperyl",
+            "title": "ComfyUI-RGT",
+            "id": "rgt",
+            "reference": "https://github.com/viperyl/ComfyUI-RGT",
+            "pip": ["loguru"],
+            "files": [
+                "https://github.com/viperyl/ComfyUI-RGT"
+            ],
+            "install_type": "git-clone",
+            "description": "This repo cast Recursive Generalization Transformer for Image Super-Resolution to ComfyUI, the original [a/paper link](https://arxiv.org/abs/2303.06373) and [a/github link](https://github.com/zhengchen1999/RGT)"
         },
         {
             "author": "SuperBeastsAI",
@@ -8041,7 +8086,7 @@
         {
             "author": "AIFSH",
             "title": "ComfyUI-RVC",
-            "id": "rvc",
+            "id": "aifsh-rvc",
             "reference": "https://github.com/AIFSH/ComfyUI-RVC",
             "files": [
                 "https://github.com/AIFSH/ComfyUI-RVC"
@@ -8085,7 +8130,7 @@
         {
             "author": "AIFSH",
             "title": "ComfyUI_V-Express",
-            "id": "v-express",
+            "id": "v-express-aifsh",
             "reference": "https://github.com/AIFSH/ComfyUI_V-Express",
             "files": [
                 "https://github.com/AIFSH/ComfyUI_V-Express"
@@ -8508,7 +8553,7 @@
         {
             "author": "JettHu",
             "title": "ComfyUI-TCD",
-            "id": "tcd",
+            "id": "jetthu-tcd",
             "reference": "https://github.com/JettHu/ComfyUI-TCD",
             "files": [
                 "https://github.com/JettHu/ComfyUI-TCD"
@@ -9354,6 +9399,17 @@
             "description": "ComfyUI-AutoLabel is a custom node for ComfyUI that uses BLIP (Bootstrapping Language-Image Pre-training) to generate detailed descriptions of the main object in an image. This node leverages the power of BLIP to provide accurate and context-aware captions for images."
         },
         {
+            "author": "fexploit",
+            "title": "ComfyUI-Classifier",
+            "id": "classifier",
+            "reference": "https://github.com/fexploit/ComfyUI-Classifier",
+            "files": [
+                "https://github.com/fexploit/ComfyUI-Classifier"
+            ],
+            "install_type": "git-clone",
+            "description": "ComfyUI-Classifier is a custom node for ComfyUI that uses a zero-shot classification model to classify text inputs based on a set of candidate labels. This node leverages the power of Hugging Face Transformers to provide accurate and flexible text classification."
+        },
+        {
             "author": "linshier",
             "title": "comfyui-remote-tools",
             "id": "remote-tools",
@@ -9477,7 +9533,7 @@
         {
             "author": "SayanoAI",
             "title": "Comfy-RVC",
-            "id": "rvc",
+            "id": "sayano-rvc",
             "reference": "https://github.com/SayanoAI/Comfy-RVC",
             "files": [
                 "https://github.com/SayanoAI/Comfy-RVC"
@@ -9714,6 +9770,105 @@
             "install_type": "git-clone",
             "description": "[a/MusePose](https://github.com/TMElyralab/MusePose) is an image-to-video generation framework for virtual human under control signal such as pose.\nNOTE: You need to download weigths manually from: [a/https://huggingface.co/TMElyralab/MusePose](https://huggingface.co/TMElyralab/MusePose).[w/The repository name has changed. If you are not receiving updates, please delete the existing node and reinstall it.]"
         },
+        {
+            "author": "PnthrLeo",
+            "title": "comfyUI-image-search",
+            "id": "image-search",
+            "reference": "https://github.com/PnthrLeo/comfyUI-image-search",
+            "files": [
+                "https://github.com/PnthrLeo/comfyUI-image-search"
+            ],
+            "install_type": "git-clone",
+            "description": "Nodes:Close Images Searcher"
+        },
+        {
+            "author": "l20richo",
+            "title": "ComfyUI-Azure-Blob-Storage",
+            "id": "azure-blob-storage",
+            "reference": "https://github.com/l20richo/ComfyUI-Azure-Blob-Storage",
+            "files": [
+                "https://github.com/l20richo/ComfyUI-Azure-Blob-Storage"
+            ],
+            "install_type": "git-clone",
+            "description": "ComfyUI-Azure-Blob-Storage seamlessly integrates with [a/Azure Blob Storage](https://azure.microsoft.com/en-us/products/storage/blobs/) in ComfyUI. This open-source project provides custom nodes for effortless loading and saving of images, videos, and checkpoint models directly from Azure blob containers within the ComfyUI graph interface."
+        },
+        {
+            "author": "AARG-FAN",
+            "title": "Image-vector-for-ComfyUI",
+            "id": "image-vector",
+            "reference": "https://github.com/AARG-FAN/Image-Raster-for-ComfyUI",
+            "files": [
+                "https://github.com/AARG-FAN/Image-Raster-for-ComfyUI"
+            ],
+            "install_type": "git-clone",
+            "description": "a wrap-up of ComfyUI nodes for converting pixels to raster, sent out to [a/Vtracer](https://github.com/visioncortex/vtracer)!"
+        },
+        {
+            "author": "Smirnov75",
+            "title": "ComfyUI-mxToolkit",
+            "id": "mxtoolkit",
+            "reference": "https://github.com/Smirnov75/ComfyUI-mxToolkit",
+            "files": [
+                "https://github.com/Smirnov75/ComfyUI-mxToolkit"
+            ],
+            "install_type": "git-clone",
+            "description": "A set of useful nodes for convenient use of ComfyUI, including: Seed randomization before the generation process starts, with saving of the last used values and the ability to automatically interrupt the current generation; A function to pause the generation process; Slider nodes for convenient control of input parameters; An alternative version of the standard Reroute node."
+        },
+        {
+            "author": "humgate",
+            "title": "simplecomfy",
+            "reference": "https://github.com/humgate/simplecomfy",
+            "files": [
+                "https://github.com/humgate/simplecomfy"
+            ],
+            "install_type": "git-clone",
+            "description": "Simple JS application based on ComfyUI which takes prompt and style picture from user and runs hardcoded workflow inference returning generated image to user."
+        },
+        {
+            "author": "vanche1212",
+            "title": "ZMG PLUGIN",
+            "id": "zmg",
+            "reference": "https://github.com/vanche1212/ComfyUI-fq393",
+            "files": [
+                "https://github.com/vanche1212/ComfyUI-fq393"
+            ],
+            "install_type": "git-clone",
+            "description": "Nodes:ApiRequestNode, LoadVideoNode, JsonParserNode, OllamaRequestNode, OldPhotoColorizationNode."
+        },
+        {
+            "author": "hben35096",
+            "title": "ComfyUI-ToolBox",
+            "id": "hben-toolbox",
+            "reference": "https://github.com/hben35096/ComfyUI-ToolBox",
+            "files": [
+                "https://github.com/hben35096/ComfyUI-ToolBox"
+            ],
+            "install_type": "git-clone",
+            "description": "Nodes:commonly_node."
+        },
+        {
+            "author": "tiankuan93",
+            "title": "V-Express: Conditional Dropout for Progressive Training of Portrait Video Generation",
+            "id": "v-express",
+            "reference": "https://github.com/tiankuan93/ComfyUI-V-Express",
+            "files": [
+                "https://github.com/tiankuan93/ComfyUI-V-Express"
+            ],
+            "install_type": "git-clone",
+            "description": "[Original] In the field of portrait video generation, the use of single images to generate portrait videos has become increasingly prevalent. A common approach involves leveraging generative models to enhance adapters for controlled generation. However, control signals can vary in strength, including text, audio, image reference, pose, depth map, etc. Among these, weaker conditions often struggle to be effective due to interference from stronger conditions, posing a challenge in balancing these conditions. In our work on portrait video generation, we identified audio signals as particularly weak, often overshadowed by stronger signals such as pose and original image. However, direct training with weak signals often leads to difficulties in convergence. To address this, we propose V-Express, a simple method that balances different control signals through a series of progressive drop operations. Our method gradually enables effective control by weak conditions, thereby achieving generation capabilities that simultaneously take into account pose, input image, and audio.\nNOTE: You need to downdload [a/model_ckpts](https://huggingface.co/tk93/V-Express/tree/main) manually."
+        },
+        {
+            "author": "CMonk",
+            "title": "Stable Projectorz Bridge",
+            "id": "projectorz",
+            "reference": "https://github.com/tianlang0704/ComfyUI-StableProjectorzBridge",
+            "files": [
+                "https://github.com/tianlang0704/ComfyUI-StableProjectorzBridge"
+            ],
+            "install_type": "git-clone",
+            "description": "This custom nodes enables Stable Projectorz to work with ComfyUI Directly."
+        },
+
 
 
 

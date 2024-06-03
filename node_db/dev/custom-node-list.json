@@ -9,7 +9,116 @@
             "description": "If you see this message, your ComfyUI-Manager is outdated.\nDev channel provides only the list of the developing nodes. If you want to find the complete node list, please go to the Default channel."
         },
 
-
+        {
+            "author": "huchenlei",
+            "title": "ComfyUI_omost [WIP]",
+            "id": "omost",
+            "reference": "https://github.com/huchenlei/ComfyUI_omost",
+            "files": [
+                "https://github.com/huchenlei/ComfyUI_omost"
+            ],
+            "install_type": "git-clone",
+            "description": "Nodes:ComfyUI implementation of [a/Omost](https://github.com/lllyasviel/Omost)."
+        },
+        {
+            "author": "StartHua",
+            "title": "Comfyui_CXH_CRM",
+            "id": "cxh-crm",
+            "reference": "https://github.com/StartHua/Comfyui_CXH_CRM",
+            "files": [
+                "https://github.com/StartHua/Comfyui_CXH_CRM"
+            ],
+            "install_type": "git-clone",
+            "description": "Nodes:CRM"
+        },
+        {
+            "author": "comfypod",
+            "title": "ComfyUI-Comflow",
+            "id": "comflow",
+            "reference": "https://github.com/comfypod/ComfyUI-Comflow",
+            "files": [
+                "https://github.com/comfypod/ComfyUI-Comflow"
+            ],
+            "install_type": "git-clone",
+            "description": "ComfyUI-Comflow."
+        },
+        {
+            "author": "AI2lab",
+            "title": "comfyUI-tool-2lab",
+            "id": "tool2lab",
+            "reference": "https://github.com/AI2lab/comfyUI-tool-2lab",
+            "files": [
+                "https://github.com/AI2lab/comfyUI-tool-2lab"
+            ],
+            "install_type": "git-clone",
+            "description": "simple tool set for developing workflow and publish to web api server"
+        },
+        {
+            "author": "pamparamm",
+            "title": "ComfyUI-ppm",
+            "id": "ppm",
+            "reference": "https://github.com/pamparamm/ComfyUI-ppm",
+            "files": [
+                "https://github.com/pamparamm/ComfyUI-ppm"
+            ],
+            "install_type": "git-clone",
+            "description": "Nodes:Empty Latent Image (Aspect Ratio), Token Counter, Random Prompt Generator, StableCascade_AutoCompLatent, CLIPTextEncode, CLIPMicroConditioning, CLIPNegPip"
+        },
+        {
+            "author": "Scorpinaus",
+            "title": "ComfyUI-DiffusersLoader",
+            "id": "diffusersloader",
+            "reference": "https://github.com/Scorpinaus/ComfyUI-DiffusersLoader",
+            "files": [
+                "https://github.com/Scorpinaus/ComfyUI-DiffusersLoader"
+            ],
+            "install_type": "git-clone",
+            "description": "The purpose of this package is to understand how loading of diffusers format checkpoints are done in comfyUI and to create a loader that works for SDXL."
+        },
+        {
+            "author": "FoundD-oka",
+            "title": "ComfyUI KISEKAE-OOTD",
+            "id": "kisekae-ootd",
+            "reference": "https://github.com/FoundD-oka/ComfyUI-kisekae-OOTD",
+            "files": [
+                "https://github.com/FoundD-oka/ComfyUI-kisekae-OOTD"
+            ],
+            "install_type": "git-clone",
+            "description": "Nodes:LoadOOTDPipeline, LoadOOTDPipelineHub, LoadOOTDPipelineHub."
+        },
+        {
+            "author": "bruce007lee",
+            "title": "comfyui-tiny-utils",
+            "id": "tiny-utils",
+            "reference": "https://github.com/bruce007lee/comfyui-tiny-utils",
+            "files": [
+                "https://github.com/bruce007lee/comfyui-tiny-utils"
+            ],
+            "install_type": "git-clone",
+            "description": "Nodes:FaceAlign, FaceAlignImageProcess, FaceAlignMaskProcess"
+        },
+        {
+            "author": "zmwv823",
+            "title": "ComfyUI-AnyText [UNSTABLE]",
+            "id": "anytext",
+            "reference": "https://github.com/zmwv823/ComfyUI-AnyText",
+            "files": [
+                "https://github.com/zmwv823/ComfyUI-AnyText"
+            ],
+            "install_type": "git-clone",
+            "description": "Unofficial Simple And Rough Implementation Of [a/AnyText](https://github.com/tyxsspa/AnyText)"
+        },
+        {
+            "author": "brycegoh",
+            "title": "brycegoh/comfyui-custom-nodes",
+            "id": "brycegoh",
+            "reference": "https://github.com/brycegoh/comfyui-custom-nodes",
+            "files": [
+                "https://github.com/brycegoh/comfyui-custom-nodes"
+            ],
+            "install_type": "git-clone",
+            "description": "Nodes:MaskAreaComparisonSegment, FillMaskedArea, OCRAndMask"
+        },
         {
             "author": "LykosAI",
             "title": "ComfyUI Nodes for Inference.Core",
@@ -183,16 +292,6 @@
             "description": "Nodes:Lora Block Weight Regex Loader"
         },
         {
-            "author": "88IO",
-            "title": "ComfyUI Image Reordering Plugins [WIP]",
-            "reference": "https://github.com/88IO/ComfyUI-ImageReorder",
-            "files": [
-                "https://github.com/88IO/ComfyUI-ImageReorder"
-            ],
-            "install_type": "git-clone",
-            "description": "A custom node reorder multiple image frames based on indexes or curves."
-        },
-        {
             "author": "christian-byrne",
             "title": "Python Interpreter ComfyUI Node [UNSAFE]",
             "reference": "https://github.com/christian-byrne/python-interpreter-node",
@@ -221,16 +320,6 @@
             ],
             "install_type": "git-clone",
             "description": "A simple image feed for comfyUI which is easily configurable and easily extensible.\nUse the filter button to select which nodes write to the feed. Under settings, there are options that allow you: Position the feed. Set a max iamge count for the feed. Set oldest to newest or newest to oldest."
-        },
-        {
-            "author": "liusida",
-            "title": "ComfyUI-Sida-Remove-Image [UNSAFE]",
-            "reference": "https://github.com/liusida/ComfyUI-Sida-Remove-Image",
-            "files": [
-                "https://github.com/liusida/ComfyUI-Sida-Remove-Image"
-            ],
-            "install_type": "git-clone",
-            "description": "Nodes: LoadImageWithPrivacy, RemoveImage.[w/This extension is not secure because it provides the capability to delete files from arbitrary paths.]"
         },
         {
             "author": "shadowcz007",
@@ -273,16 +362,6 @@
             ],
             "install_type": "git-clone",
             "description": "This extension provides [a/DiffBIR](https://github.com/XPixelGroup/DiffBIR) feature."
-        },
-        {
-            "author": "Levy1417",
-            "title": "Universal-Data-Processing-Kit [UNSAFE]",
-            "reference": "https://github.com/Levy1417/Universal-Data-Processing-Kit",
-            "files": [
-                "https://github.com/Levy1417/Universal-Data-Processing-Kit"
-            ],
-            "install_type": "git-clone",
-            "description": "Nodes:DPK - Any Eval, DPK - Extract Array, DPK - Run External Program, DPK - Any Literals, DPK - Set Node States, DPK - Realtime Text Preview, DPK - Dynamic Action, DPK - Object To Json, DPK - Json To Object\n[w/This extension includes the ability to execute arbitrary code and programs.]"
         },
         {
             "author": "runtime44",
@@ -585,16 +664,6 @@
             "description": "Generator for StyleGAN 3"
         },
         {
-            "author": "christian-byrne",
-            "title": "elimination-nodes",
-            "reference": "https://github.com/christian-byrne/elimination-nodes",
-            "files": [
-                "https://github.com/christian-byrne/elimination-nodes"
-            ],
-            "install_type": "git-clone",
-            "description": "Nodes:Paste Cutout on Base Image"
-        },
-        {
             "author": "A719689614",
             "title": "ComfyUI_AC_FUNV8Beta1",
             "reference": "https://github.com/A719689614/ComfyUI_AC_FUNV8Beta1",
@@ -773,16 +842,6 @@
             ],
             "install_type": "git-clone",
             "description": "Download [a/CLIPSeg](https://huggingface.co/CIDAS/clipseg-rd64-refined/tree/main), move to : models/clipseg"
-        },
-        {
-            "author": "dezi-ai",
-            "title": "ComfyUI Animate LCM",
-            "reference": "https://github.com/dezi-ai/ComfyUI-AnimateLCM",
-            "files": [
-                "https://github.com/dezi-ai/ComfyUI-AnimateLCM"
-            ],
-            "install_type": "git-clone",
-            "description": "ComfyUI implementation for [a/AnimateLCM](https://animatelcm.github.io/) [[a/paper](https://arxiv.org/abs/2402.00769)].\b[w/This extension includes a large number of nodes imported from the existing custom nodes, increasing the likelihood of conflicts.]"
         },
         {
             "author": "stutya",
@@ -1093,16 +1152,6 @@
             ],
             "install_type": "git-clone",
             "description": "After discovering @storyicon implementation here of Segment Anything, I realized its potential as a powerful tool for ComfyUI if implemented correctly. I delved into the SAM and Dino models. The following is my own adaptation of sam_hq for ComfyUI."
-        },
-        {
-            "author": "phineas-pta",
-            "title": "comfy-trt-test [WIP]",
-            "reference": "https://github.com/phineas-pta/comfy-trt-test",
-            "files": [
-                "https://github.com/phineas-pta/comfy-trt-test"
-            ],
-            "install_type": "git-clone",
-            "description": "Test project for ComfyUI TensorRT Support.\nNOT WORKING YET.\nnot automatic yet, do not use ComfyUI-Manager to install !!!.\nnot beginner-friendly yet, still intended to technical users\nNOTE: The reason for registration in the Manager is for guidance, and for detailed installation instructions, please visit the repository."
         },
         {
             "author": "Brandelan",
