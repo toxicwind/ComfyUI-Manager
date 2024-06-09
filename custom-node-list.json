@@ -3211,6 +3211,17 @@
             "description": "[a/ImageReward](https://github.com/THUDM/ImageReward): Human preference learning in text-to-image generation. This is a [a/paper](https://arxiv.org/abs/2304.05977) from NeurIPS 2023"
         },
         {
+            "author": "shadowcz007",
+            "title": "comfyui-sound-lab",
+            "id": "soundlab",
+            "reference": "https://github.com/shadowcz007/comfyui-sound-lab",
+            "files": [
+                "https://github.com/shadowcz007/comfyui-sound-lab"
+            ],
+            "install_type": "git-clone",
+            "description": "Nodes:Music Gen, Audio Play, Stable Audio"
+        },
+        {
             "author": "ostris",
             "title": "Ostris Nodes ComfyUI",
             "id": "ostris",
@@ -6954,6 +6965,17 @@
             "description": "ComfyUI native implementation of [a/IC-Light](https://github.com/lllyasviel/IC-Light)."
         },
         {
+            "author": "huchenlei",
+            "title": "ComfyUI DenseDiffusion",
+            "id": "densediffusion",
+            "reference": "https://github.com/huchenlei/ComfyUI_densediffusion",
+            "files": [
+                "https://github.com/huchenlei/ComfyUI_densediffusion"
+            ],
+            "install_type": "git-clone",
+            "description": "[a/DenseDiffusion](https://github.com/naver-ai/DenseDiffusion) custom node for ComfyUI."
+        },
+        {
             "author": "nathannlu",
             "title": "ComfyUI Pets",
             "id": "pets",
@@ -7913,16 +7935,6 @@
             "description": "Custom Node for comfyUI for virtual lighting based on normal map.\nYou can use normal maps to add virtual lighting effects to your images."
         },
         {
-            "author": "AppleBotzz",
-            "title": "ComfyUI_LLMVISION",
-            "reference": "https://github.com/AppleBotzz/ComfyUI_LLMVISION",
-            "files": [
-                "https://github.com/AppleBotzz/ComfyUI_LLMVISION"
-            ],
-            "install_type": "git-clone",
-            "description": "This repository provides integration of GPT-4 and Claude 3 models into ComfyUI, allowing for both image and text-based interactions within the ComfyUI workflow."
-        },
-        {
             "author": "A4P7J1N7M05OT",
             "title": "ComfyUI-PixelOE",
             "reference": "https://github.com/A4P7J1N7M05OT/ComfyUI-PixelOE",
@@ -8767,17 +8779,6 @@
             ],
             "install_type": "git-clone",
             "description": "Photoshop type functions and adjustment layers: 30 blend modes, Selective Color, Blend If, Color Balance, Solid Color Images, Black and White, Hue/Saturation, Levels, and RGB Splitting and Merging."
-        },
-        {
-            "author": "Shinsplat",
-            "title": "ComfyUI-Shinsplat",
-            "id": "shinsplat",
-            "reference": "https://github.com/Shinsplat/ComfyUI-Shinsplat",
-            "files": [
-                "https://github.com/Shinsplat/ComfyUI-Shinsplat"
-            ],
-            "install_type": "git-clone",
-            "description": "Nodes: Clip Text Encode (Shinsplat), Clip Text Encode SDXL (Shinsplat), Lora Loader (Shinsplat)."
         },
         {
             "author": "da2el-ai",
@@ -10056,6 +10057,60 @@
             "install_type": "git-clone",
             "description": "ComfyUI implementation of [a/FlashFace: Human Image Personalization with High-fidelity Identity Preservation](https://github.com/ali-vilab/FlashFace)\nNOTE: You need to downalod models manually."
         },
+        {
+            "author": "LZpenguin",
+            "title": "ComfyUI-Text",
+            "id": "comfy-text",
+            "reference": "https://github.com/LZpenguin/ComfyUI-Text",
+            "files": [
+                "https://github.com/LZpenguin/ComfyUI-Text"
+            ],
+            "install_type": "git-clone",
+            "description": "Nodes:Add_text_by_mask"
+        },
+        {
+            "author": "denfrost",
+            "title": "Den_ComfyUI_Workflows",
+            "id": "den",
+            "reference": "https://github.com/denfrost/Den_ComfyUI_Workflow",
+            "files": [
+                "https://github.com/denfrost/Den_ComfyUI_Workflow"
+            ],
+            "install_type": "git-clone",
+            "description": "Custom nodes make easy Advanced Workflows. Focus on Image/Video and ControlNet efficiency and performances. Manipulation of Latent Space, Automatic pipeline with a bit efforts."
+        },
+        {
+            "author": "marduk191",
+            "title": "marduk191 workflow settings",
+            "id": "marnodes",
+            "reference": "https://github.com/marduk191/comfyui-marnodes",
+            "files": [
+                "https://github.com/marduk191/comfyui-marnodes"
+            ],
+            "install_type": "git-clone",
+            "description": "A node to set workflow settings."
+        },
+        {
+            "author": "haohaocreates",
+            "title": "ComfyUI-HH-Image-Selector",
+            "id": "hh-image-selector",
+            "reference": "https://github.com/haohaocreates/ComfyUI-HH-Image-Selector",
+            "files": [
+                "https://github.com/haohaocreates/ComfyUI-HH-Image-Selector"
+            ],
+            "install_type": "git-clone",
+            "description": "comfuio custom node that returns an image from a batch based on selected criteria such as RGB value, brightness, etc (credits to chris goringe's custom nodes tutorial )."
+        },
+        {
+            "author": "exdysa",
+            "title": "comfyui-selector",
+            "reference": "https://github.com/exdysa/comfyui-selector",
+            "files": [
+                "https://github.com/exdysa/comfyui-selector"
+            ],
+            "install_type": "git-clone",
+            "description": "Nodes:Selector. Quick and dirty parameter generator node for ComfyUI."
+        },
         
         
 
@@ -10363,16 +10418,6 @@
             "description": "Extension to show random cat GIFs while queueing prompt."
         },
         {
-            "author": "archifancy",
-            "title": "Image-vector-for-ComfyUI",
-            "reference": "https://github.com/archifancy/Image-vector-for-ComfyUI",
-            "files": [
-                "https://github.com/archifancy/Image-vector-for-ComfyUI/raw/main/AIvector.py"
-            ],
-            "install_type": "copy",
-            "description": "Nodes:AIvector. A wrapped comfyui node for converting pixels to vectors using Vtracer. Check it out here: [a/https://github.com/visioncortex/vtracer](https://github.com/visioncortex/vtracer)."
-        },
-        {
             "author": "barckley75",
             "title": "comfyUI_DaVinciResolve",
             "reference": "https://github.com/barckley75/comfyUI_DaVinciResolve",
@@ -10386,25 +10431,35 @@
             "description": "Nodes:TextToSpeech, phy_3_conditioning, SaveAudioToDaVinci, SaveImageToDaVinci.\nNOTE:In order to use DaVinci node you must have DaVinci Resolve Studio connected to the API. For more information check the help seciton in DaVinci Resolve Studio HELP>DOCUMENTATION>DEVELOPER. It will open a folder, search for scripting and the for README.txt file, the API documentation."
         },
         {
-            "author": "exdysa",
-            "title": "comfyui-selector",
-            "reference": "https://github.com/exdysa/comfyui-selector",
+            "author": "DannyStone1999",
+            "title": "ComfyUI-Depth2Mask",
+            "reference": "https://github.com/DannyStone1999/ComfyUI-Depth2Mask",
             "files": [
-                "https://github.com/exdysa/comfyui-selector/raw/main/selector.py"
+                "https://github.com/DannyStone1999/ComfyUI-Depth2Mask/raw/main/Depth2Mask.py"
             ],
             "install_type": "copy",
-            "description": "Nodes:Selector. Quick and dirty parameter generator node for ComfyUI."
+            "description": "Nodes:Depth2Mask"
+        },
+        {
+            "author": "Limbicnation",
+            "title": "ComfyUIDepthEstimation",
+            "reference": "https://github.com/Limbicnation/ComfyUIDepthEstimation",
+            "files": [
+                "https://github.com/Limbicnation/ComfyUIDepthEstimation/raw/main/depth_estimation_node.py"
+            ],
+            "pip": ["transformers"],
+            "install_type": "copy",
+            "description": "A custom depth estimation node for ComfyUI using transformer models. It integrates depth estimation with automatic gamma correction, contrast adjustment, and edge detection, based on the [a/TransformDepth](https://github.com/Limbicnation/TransformDepth) repository."
         },
         {
             "author": "seghier",
-            "title": "ComfyUI_Email_Notification",
-            "reference": "https://github.com/seghier/ComfyUI_Email_Notification",
+            "title": "ComfyUI_LibreTranslate",
+            "reference": "https://github.com/seghier/ComfyUI_LibreTranslate",
             "files": [
-                "https://github.com/seghier/ComfyUI_Email_Notification/raw/main/email_node.py"
+                "https://github.com/seghier/ComfyUI_LibreTranslate/raw/main/translate_node.py"
             ],
-            "pip": ["secure-smtplib==0.1.0"],
             "install_type": "copy",
-            "description": "Nodes:Email Notification"
+            "description": "Use LibreTranslation in ComfyUI [a/https://github.com/LibreTranslate/LibreTranslate](https://github.com/LibreTranslate/LibreTranslate)"
         },
 
 

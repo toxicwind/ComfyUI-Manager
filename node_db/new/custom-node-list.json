@@ -14,8 +14,92 @@
 
 
 
-
-
+        {
+            "author": "marduk191",
+            "title": "marduk191 workflow settings",
+            "id": "marnodes",
+            "reference": "https://github.com/marduk191/comfyui-marnodes",
+            "files": [
+                "https://github.com/marduk191/comfyui-marnodes"
+            ],
+            "install_type": "git-clone",
+            "description": "A node to set workflow settings."
+        },
+        {
+            "author": "denfrost",
+            "title": "Den_ComfyUI_Workflows",
+            "id": "den",
+            "reference": "https://github.com/denfrost/Den_ComfyUI_Workflow",
+            "files": [
+                "https://github.com/denfrost/Den_ComfyUI_Workflow"
+            ],
+            "install_type": "git-clone",
+            "description": "Custom nodes make easy Advanced Workflows. Focus on Image/Video and ControlNet efficiency and performances. Manipulation of Latent Space, Automatic pipeline with a bit efforts."
+        },
+        {
+            "author": "LZpenguin",
+            "title": "ComfyUI-Text",
+            "id": "comfy-text",
+            "reference": "https://github.com/LZpenguin/ComfyUI-Text",
+            "files": [
+                "https://github.com/LZpenguin/ComfyUI-Text"
+            ],
+            "install_type": "git-clone",
+            "description": "Nodes:Add_text_by_mask"
+        },
+        {
+            "author": "seghier",
+            "title": "ComfyUI_LibreTranslate",
+            "reference": "https://github.com/seghier/ComfyUI_LibreTranslate",
+            "files": [
+                "https://github.com/seghier/ComfyUI_LibreTranslate/raw/main/translate_node.py"
+            ],
+            "install_type": "copy",
+            "description": "Use LibreTranslation in ComfyUI [a/https://github.com/LibreTranslate/LibreTranslate](https://github.com/LibreTranslate/LibreTranslate)"
+        },
+        {
+            "author": "Limbicnation",
+            "title": "ComfyUIDepthEstimation",
+            "reference": "https://github.com/Limbicnation/ComfyUIDepthEstimation",
+            "files": [
+                "https://github.com/Limbicnation/ComfyUIDepthEstimation/raw/main/depth_estimation_node.py"
+            ],
+            "pip": ["transformers"],
+            "install_type": "copy",
+            "description": "A custom depth estimation node for ComfyUI using transformer models. It integrates depth estimation with automatic gamma correction, contrast adjustment, and edge detection, based on the [a/TransformDepth](https://github.com/Limbicnation/TransformDepth) repository."
+        },
+        {
+            "author": "shadowcz007",
+            "title": "comfyui-sound-lab",
+            "id": "soundlab",
+            "reference": "https://github.com/shadowcz007/comfyui-sound-lab",
+            "files": [
+                "https://github.com/shadowcz007/comfyui-sound-lab"
+            ],
+            "install_type": "git-clone",
+            "description": "Nodes:Music Gen, Audio Play, Stable Audio"
+        },
+        {
+            "author": "huchenlei",
+            "title": "ComfyUI DenseDiffusion",
+            "id": "densediffusion",
+            "reference": "https://github.com/huchenlei/ComfyUI_densediffusion",
+            "files": [
+                "https://github.com/huchenlei/ComfyUI_densediffusion"
+            ],
+            "install_type": "git-clone",
+            "description": "[a/DenseDiffusion](https://github.com/naver-ai/DenseDiffusion) custom node for ComfyUI."
+        },
+        {
+            "author": "DannyStone1999",
+            "title": "ComfyUI-Depth2Mask",
+            "reference": "https://github.com/DannyStone1999/ComfyUI-Depth2Mask",
+            "files": [
+                "https://github.com/DannyStone1999/ComfyUI-Depth2Mask/raw/main/Depth2Mask.py"
+            ],
+            "install_type": "copy",
+            "description": "Nodes:Depth2Mask"
+        },
         {
             "author": "smthemex",
             "title": "ComfyUI_StableAudio_Open",
@@ -82,17 +166,6 @@
             ],
             "install_type": "git-clone",
             "description": "Nodes: StableAudioSampler. Wraps the new Stable Audio Open Model in the sampler that dropped Jun 5th. See Github for Features"
-        },
-        {
-            "author": "seghier",
-            "title": "ComfyUI_Email_Notification",
-            "reference": "https://github.com/seghier/ComfyUI_Email_Notification",
-            "files": [
-                "https://github.com/seghier/ComfyUI_Email_Notification/raw/main/email_node.py"
-            ],
-            "pip": ["secure-smtplib==0.1.0"],
-            "install_type": "copy",
-            "description": "Nodes:Email Notification"
         },
         {
             "author": "luandev",
@@ -631,71 +704,6 @@
             ],
             "install_type": "git-clone",
             "description": "Basic support for StyleGAN2 and StyleGAN3 models."
-        },
-        {
-            "author": "Mason-McGough",
-            "title": "🎨 ComfyUI-Mosaica",
-            "id": "mosaica",
-            "reference": "https://github.com/Mason-McGough/ComfyUI-Mosaica",
-            "files": [
-                "https://github.com/Mason-McGough/ComfyUI-Mosaica"
-            ],
-            "install_type": "git-clone",
-            "description": "Create colorful mosaic images in ComfyUI by computing label images and applying lookup tables."
-        },
-        {
-            "author": "larsupb",
-            "title": "LoRA Power-Merger ComfyUI",
-            "id": "lora-powermerger",
-            "reference": "https://github.com/larsupb/LoRA-Merger-ComfyUI",
-            "files": [
-                "https://github.com/larsupb/LoRA-Merger-ComfyUI"
-            ],
-            "install_type": "git-clone",
-            "description": "An extension for merging LoRAs. Offers a wide range of LoRA merge techniques (including dare) and XY plots. XY plots require efficiency nodes."
-        },
-        {
-            "author": "alessandrozonta",
-            "title": "Save Layers Node for ComfyUI",
-            "id": "layers",
-            "reference": "https://github.com/alessandrozonta/ComfyUI-Layers",
-            "files": [
-                "https://github.com/alessandrozonta/ComfyUI-Layers"
-            ],
-            "install_type": "git-clone",
-            "description": "This custom node for ComfyUI allows you to create layers of an image based on input masks and save them into a PSD file."
-        },
-        {
-            "author": "githubYiheng",
-            "title": "comfyui_meanshift_filter",
-            "id": "meanshift-filter",
-            "reference": "https://github.com/githubYiheng/comfyui_meanshift_filter",
-            "files": [
-                "https://github.com/githubYiheng/comfyui_meanshift_filter"
-            ],
-            "install_type": "git-clone",
-            "description": "Nodes:Apply Meanshift Filter"
-        },
-        {
-            "author": "cuongloveit",
-            "title": "comfy_http_request",
-            "reference": "https://github.com/cuongloveit/comfy_http_request",
-            "files": [
-                "https://github.com/cuongloveit/comfy_http_request"
-            ],
-            "install_type": "git-clone",
-            "description": "Nodes:Send Http Request. You can use this node to save full size images through the websocket."
-        },
-        {
-            "author": "SayanoAI",
-            "title": "Comfy-RVC",
-            "id": "rvc",
-            "reference": "https://github.com/SayanoAI/Comfy-RVC",
-            "files": [
-                "https://github.com/SayanoAI/Comfy-RVC"
-            ],
-            "install_type": "git-clone",
-            "description": "ComfyUI custom nodes for RVC related inference and image generation"
         }
     ]
 }
