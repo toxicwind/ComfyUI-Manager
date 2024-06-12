@@ -4015,6 +4015,17 @@
             "description": "Animated optical illusions in ComfyUI"
         },
         {
+            "author": "ZHO-ZHO-ZHO",
+            "title": "ComfyUI-Qwen-2",
+            "id": "qwen-2",
+            "reference": "https://github.com/ZHO-ZHO-ZHO/ComfyUI-Qwen-2",
+            "files": [
+                "https://github.com/ZHO-ZHO-ZHO/ComfyUI-Qwen-2"
+            ],
+            "install_type": "git-clone",
+            "description": "Using Qwen-2 in ComfyUI"
+        },
+        {
             "author": "kenjiqq",
             "title": "qq-nodes-comfyui",
             "reference": "https://github.com/kenjiqq/qq-nodes-comfyui",
@@ -6976,6 +6987,17 @@
             "description": "[a/DenseDiffusion](https://github.com/naver-ai/DenseDiffusion) custom node for ComfyUI."
         },
         {
+            "author": "huchenlei",
+            "title": "ComfyUI_omost",
+            "id": "omost",
+            "reference": "https://github.com/huchenlei/ComfyUI_omost",
+            "files": [
+                "https://github.com/huchenlei/ComfyUI_omost"
+            ],
+            "install_type": "git-clone",
+            "description": "ComfyUI implementation of [a/Omost](https://github.com/lllyasviel/Omost), and everything about regional prompt.\nNOTE: You need to install ComfyUI_densediffusion to use this node."
+        },
+        {
             "author": "nathannlu",
             "title": "ComfyUI Pets",
             "id": "pets",
@@ -7434,7 +7456,7 @@
         },
         {
             "author": "MarkoCa1",
-            "title": "ComfyUI_Text",
+            "title": "ComfyUI-Text",
             "reference": "https://github.com/MarkoCa1/ComfyUI-Text",
             "files": [
                 "https://github.com/MarkoCa1/ComfyUI-Text"
@@ -7505,7 +7527,7 @@
                 "https://github.com/daxcay/ComfyUI-DRMN"
             ],
             "install_type": "git-clone",
-            "description": "Data Research And Manipulators Nodes for Model Trainers, Artists, Designers and Animators. Captions, Visualizer, Text Manipulator"
+            "description": "Data Research And Manipulators Nodes for Model Trainers, Artists, Designers and Animators. Captions, Visualizer, Text Manipulator\nNOTE: This repo is renamed to ComfyUI-DataSet."
         },
         {
             "author": "daxcay",
@@ -8305,6 +8327,17 @@
             "description": "This node allows you to use customnet."
         },
         {
+            "author": "smthemex",
+            "title": "ComfyUI_Pops",
+            "id": "pops",
+            "reference": "https://github.com/smthemex/ComfyUI_Pops",
+            "files": [
+                "https://github.com/smthemex/ComfyUI_Pops"
+            ],
+            "install_type": "git-clone",
+            "description": "You can use [a/Popspaper](https://popspaper.github.io/pOps/) method in comfyUI"
+        },
+        {
            "author": "choey",
            "title": "Comfy-Topaz",
            "id": "topaz",
@@ -8921,6 +8954,17 @@
             "description": "This custom node for ComfyUI allows you to create layers of an image based on input masks and save them into a PSD file."
         },
         {
+            "author": "alessandrozonta",
+            "title": "OpenPose Node",
+            "id": "openpose-alessandrozonta",
+            "reference": "https://github.com/alessandrozonta/ComfyUI-OpenPose",
+            "files": [
+                "https://github.com/alessandrozonta/ComfyUI-OpenPose"
+            ],
+            "install_type": "git-clone",
+            "description": "This extension contains a custom node for ComfyUI. The node, called 'Bounding Box Crop', is designed to compute the top-left coordinates of a cropped bounding box based on input coordinates and dimensions of the final cropped image. It does so computing the center of the cropping area and then computing where the top-left coordinates would be."
+        },
+        {
             "author": "curiousjp",
             "title": "ComfyUI-MaskBatchPermutations",
             "id": "maskbatch-permutations",
@@ -8950,7 +8994,7 @@
                 "https://github.com/runtime44/comfyui_r44_nodes"
             ],
             "install_type": "git-clone",
-            "description": "Nodes: Runtime44Upscaler, Runtime44ColorMatch, Runtime44DynamicKSampler, Runtime44ImageOverlay, Runtime44ImageResizer, Runtime44ImageToNoise, Runtime44MaskSampler, Runtime44TiledMaskSampler, Runtime44IterativeUpscaleFactor, Runtime44ImageEnhance"
+            "description": "Nodes: Runtime44Upscaler, Runtime44ColorMatch, Runtime44DynamicKSampler, Runtime44ImageOverlay, Runtime44ImageResizer, Runtime44ImageToNoise, Runtime44MaskSampler, Runtime44TiledMaskSampler, Runtime44IterativeUpscaleFactor, Runtime44ImageEnhance, Runtime44FilmGrain"
         },
         {
             "author": "osiworx",
@@ -10058,17 +10102,6 @@
             "description": "ComfyUI implementation of [a/FlashFace: Human Image Personalization with High-fidelity Identity Preservation](https://github.com/ali-vilab/FlashFace)\nNOTE: You need to downalod models manually."
         },
         {
-            "author": "LZpenguin",
-            "title": "ComfyUI-Text",
-            "id": "comfy-text",
-            "reference": "https://github.com/LZpenguin/ComfyUI-Text",
-            "files": [
-                "https://github.com/LZpenguin/ComfyUI-Text"
-            ],
-            "install_type": "git-clone",
-            "description": "Nodes:Add_text_by_mask"
-        },
-        {
             "author": "denfrost",
             "title": "Den_ComfyUI_Workflows",
             "id": "den",
@@ -10110,6 +10143,61 @@
             ],
             "install_type": "git-clone",
             "description": "Nodes:Selector. Quick and dirty parameter generator node for ComfyUI."
+        },
+        {
+          "author": "Jin Liu",
+          "title": "ComfyUI-LJNodes",
+          "id": "ComfyUI-LJNodes",
+          "reference": "https://github.com/coolzilj/ComfyUI-LJNodes",
+          "files": [
+                "https://github.com/coolzilj/ComfyUI-LJNodes"
+          ],
+          "install_type": "git-clone",
+          "description": "A variety of custom nodes to enhance ComfyUI for a buttery smooth experience."
+        },
+        {
+          "author": "GavChap",
+          "title": "ComfyUI-SD3LatentSelectRes",
+          "id": "sd3latent-select-res",
+          "reference": "https://github.com/GavChap/ComfyUI-SD3LatentSelectRes",
+          "files": [
+                "https://github.com/GavChap/ComfyUI-SD3LatentSelectRes"
+          ],
+          "install_type": "git-clone",
+          "description": "You'll get a new node called SD3 Latent Select Resolution, you can pick the x and y sizes from a list."
+        },
+        {
+          "author": "BenNarum",
+          "title": "SigmaWaveFormNodes",
+          "id": "sigmawaveform",
+          "reference": "https://github.com/BenNarum/SigmaWaveFormNode",
+          "files": [
+                "https://github.com/BenNarum/SigmaWaveFormNode"
+          ],
+          "install_type": "git-clone",
+          "description": "A set of tools for generating and altering sigmas in ComfyUI."
+        },
+        {
+            "author": "shobhitic",
+            "title": "PlusMinusTextClip - Single node for Positive and Negative Prompts",
+            "id": "plusminustextclip",
+            "reference": "https://github.com/shobhitic/ComfyUI-PlusMinusTextClip",
+            "files": [
+                "https://github.com/shobhitic/ComfyUI-PlusMinusTextClip"
+            ],
+            "install_type": "git-clone",
+            "description": "This adds a node that has both the positive and negative prompts as input in one node. You can just add one node and be done with both Positive and Negative prompts, in place of adding two different nodes for them."
+        },
+        {
+            "author": "Late Night Labs",
+            "title": "LNL Frame Selector",
+            "id": "lnlframeselector",
+            "reference": "https://github.com/latenightlabs/ComfyUI-LNL",
+            "files": [
+                "https://github.com/latenightlabs/ComfyUI-LNL"
+            ],
+            "install_type": "git-clone",
+            "description": "Frame Selector & Sequence Selection Node for ComfyUI."
         },
         
         
