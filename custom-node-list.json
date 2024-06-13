@@ -7172,14 +7172,14 @@
         },
         {
             "author": "ljleb",
-            "title": "comfy-mecha",
+            "title": "Mecha Merge Node Pack",
             "id": "mecha",
             "reference": "https://github.com/ljleb/comfy-mecha",
             "files": [
                 "https://github.com/ljleb/comfy-mecha"
             ],
             "install_type": "git-clone",
-            "description": "Nodes:Blocks Mecha Hyper, Mecha Merger, Model Mecha Recipe, Custom Code Mecha Recipe"
+            "description": "Model merging node pack with a focus on low memory footprint."
         },
         {
             "author": "diSty",
@@ -10198,6 +10198,17 @@
             ],
             "install_type": "git-clone",
             "description": "Frame Selector & Sequence Selection Node for ComfyUI."
+        },
+        {
+            "author": "Michael Standen",
+            "title": "Ollama Prompt Encode",
+            "id": "ollamapromptencode",
+            "reference": "https://github.com/ScreamingHawk/comfyui-ollama-prompt-encode",
+            "files": [
+                "https://github.com/ScreamingHawk/comfyui-ollama-prompt-encode"
+            ],
+            "install_type": "git-clone",
+            "description": "A prompt generator and CLIP encoder using AI provided by Ollama."
         },
         
         
