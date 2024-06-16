@@ -1,6 +1,26 @@
 {
   "models": [
     {
+      "name": "TAESD3 Decoder",
+      "type": "TAESD",
+      "base": "SDXL",
+      "save_path": "vae_approx",
+      "description": "(SD3 Verison) To view the preview in high quality while running samples in ComfyUI, you will need this model.",
+      "reference": "https://github.com/madebyollin/taesd",
+      "filename": "taesd3_decoder.pth",
+      "url": "https://github.com/madebyollin/taesd/raw/main/taesd3_decoder.pth"
+    },
+    {
+      "name": "TAESD3 Encoder",
+      "type": "TAESD",
+      "base": "SDXL",
+      "save_path": "vae_approx",
+      "description": "(SD3 Verison) To view the preview in high quality while running samples in ComfyUI, you will need this model.",
+      "reference": "https://github.com/madebyollin/taesd",
+      "filename": "taesd3_encoder.pth",
+      "url": "https://github.com/madebyollin/taesd/raw/main/taesd3_encoder.pth"
+    },
+    {
       "name": "TAESDXL Decoder",
       "type": "TAESD",
       "base": "SDXL",
@@ -2676,6 +2696,16 @@
       "filename": "TTPLANET_Controlnet_Tile_realistic_v2_fp16.safetensors",
       "url": "https://huggingface.co/TTPlanet/TTPLanet_SDXL_Controlnet_Tile_Realistic/resolve/main/TTPLANET_Controlnet_Tile_realistic_v2_fp16.safetensors"
     },
+    {
+      "name": "TTPlanet/TTPLanet_SDXL_Controlnet_Tile_Realistic v2 (rank256)",
+      "type": "controlnet",
+      "base": "SDXL",
+      "save_path": "controlnet/SDXL",
+      "description": "[774MB] Controlnet SDXL Tile model realistic version.",
+      "reference": "https://huggingface.co/TTPlanet/TTPLanet_SDXL_Controlnet_Tile_Realistic",
+      "filename": "TTPLANET_Controlnet_Tile_realistic_v2_rank256.safetensors",
+      "url": "https://huggingface.co/TTPlanet/TTPLanet_SDXL_Controlnet_Tile_Realistic/resolve/main/TTPLANET_Controlnet_Tile_realistic_v2_rank256.safetensors"
+    },
 
     {
       "name": "ViperYX/RGT_x2.pth",
@@ -2912,6 +2942,67 @@
       "reference": "https://huggingface.co/2vXpSwA7/iroiro-lora/tree/main",
       "filename": "CN-anytest_v3-50000_pn_dim128.safetensors",
       "url": "https://huggingface.co/2vXpSwA7/iroiro-lora/resolve/main/test_controlnet2/CN-anytest_v3-50000_pn_dim128.safetensors"
+    },
+
+    {
+      "name": "kijai/DepthAnythingV2 (vitb/fp16)",
+      "type": "depthanything",
+      "base": "depthanything",
+      "save_path": "depthanything",
+      "description": "[195MB] DepthAnythingV2 model",
+      "reference": "https://huggingface.co/Kijai/DepthAnythingV2-safetensors/tree/main",
+      "filename": "depth_anything_v2_vitb_fp16.safetensors",
+      "url": "https://huggingface.co/Kijai/DepthAnythingV2-safetensors/resolve/main/depth_anything_v2_vitb_fp16.safetensors"
+    },
+    {
+      "name": "kijai/DepthAnythingV2 (vitb/fp32)",
+      "type": "depthanything",
+      "base": "depthanything",
+      "save_path": "depthanything",
+      "description": "[390MB] DepthAnythingV2 model",
+      "reference": "https://huggingface.co/Kijai/DepthAnythingV2-safetensors/tree/main",
+      "filename": "depth_anything_v2_vitb_fp32.safetensors",
+      "url": "https://huggingface.co/Kijai/DepthAnythingV2-safetensors/resolve/main/depth_anything_v2_vitb_fp32.safetensors"
+    },
+    {
+      "name": "kijai/DepthAnythingV2 (vitl/fp16)",
+      "type": "depthanything",
+      "base": "depthanything",
+      "save_path": "depthanything",
+      "description": "[671MB] DepthAnythingV2 model",
+      "reference": "https://huggingface.co/Kijai/DepthAnythingV2-safetensors/tree/main",
+      "filename": "depth_anything_v2_vitl_fp16.safetensors",
+      "url": "https://huggingface.co/Kijai/DepthAnythingV2-safetensors/resolve/main/depth_anything_v2_vitl_fp16.safetensors"
+    },
+    {
+      "name": "kijai/DepthAnythingV2 (vitl/fp32)",
+      "type": "depthanything",
+      "base": "depthanything",
+      "save_path": "depthanything",
+      "description": "[195MB] DepthAnythingV2 model",
+      "reference": "https://huggingface.co/Kijai/DepthAnythingV2-safetensors/tree/main",
+      "filename": "depth_anything_v2_vitl_fp32.safetensors",
+      "url": "https://huggingface.co/Kijai/DepthAnythingV2-safetensors/resolve/main/depth_anything_v2_vitl_fp32.safetensors"
+    },
+    {
+      "name": "kijai/DepthAnythingV2 (vits/fp16)",
+      "type": "depthanything",
+      "base": "depthanything",
+      "save_path": "depthanything",
+      "description": "[49.6MB] DepthAnythingV2 model",
+      "reference": "https://huggingface.co/Kijai/DepthAnythingV2-safetensors/tree/main",
+      "filename": "depth_anything_v2_vits_fp16.safetensors",
+      "url": "https://huggingface.co/Kijai/DepthAnythingV2-safetensors/resolve/main/depth_anything_v2_vits_fp16.safetensors"
+    },
+    {
+      "name": "kijai/DepthAnythingV2 (vitb/fp32)",
+      "type": "depthanything",
+      "base": "depthanything",
+      "save_path": "depthanything",
+      "description": "[99.2MB] DepthAnythingV2 model",
+      "reference": "https://huggingface.co/Kijai/DepthAnythingV2-safetensors/tree/main",
+      "filename": "depth_anything_v2_vits_fp32.safetensors",
+      "url": "https://huggingface.co/Kijai/DepthAnythingV2-safetensors/resolve/main/depth_anything_v2_vits_fp32.safetensors"
     }
   ]
 }

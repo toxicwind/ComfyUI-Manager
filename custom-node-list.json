@@ -2140,6 +2140,16 @@
             "description": "Based off of: [a/Birch-san/diffusers-play/approx_vae](https://github.com/Birch-san/diffusers-play/tree/main/approx_vae). This ComfyUI node allows you to quickly preview SDXL 1.0 latents."
         },
         {
+            "author": "nagolinc",
+            "title": "comfyui_openai_node",
+            "reference": "https://github.com/nagolinc/comfyui_openai_node",
+            "files": [
+                "https://github.com/nagolinc/comfyui_openai_node"
+            ],
+            "install_type": "git-clone",
+            "description": "This provides a single node openai > Open AI query node\nthat takes a system prompt and user message and sends them to chatGPT 3.5\nNote, you MUST have an OPEN AI API key stored in the environment variable OPENAI_API_KEY in order for this to work."
+        },
+        {
             "author": "bradsec",
             "title": "ResolutionSelector for ComfyUI",
             "id": "resolution-selector",
@@ -2915,6 +2925,17 @@
             ],
             "install_type": "git-clone",
             "description": "ComfyUI native nodes for IC-Light"
+        },
+        {
+            "author": "kijai",
+            "title": "ComfyUI-DepthAnythingV2",
+            "id": "depth-anything-v2",
+            "reference": "https://github.com/kijai/ComfyUI-DepthAnythingV2",
+            "files": [
+                "https://github.com/kijai/ComfyUI-DepthAnythingV2"
+            ],
+            "install_type": "git-clone",
+            "description": "ComfyUI nodes to use [a/DepthAnythingV2](https://depth-anything-v2.github.io/)\nNOTE:Models autodownload to ComfyUI/models/depthanything from [a/https://huggingface.co/Kijai/DepthAnythingV2-safetensors/tree/main](https://huggingface.co/Kijai/DepthAnythingV2-safetensors/tree/main)"
         },
         {
             "author": "hhhzzyang",
@@ -4543,7 +4564,7 @@
                 "https://github.com/MNeMoNiCuZ/ComfyUI-mnemic-nodes"
             ],
             "install_type": "git-clone",
-            "description": "Nodes:Save Text File"
+            "description": "Nodes: Save Text File, Download Image from URL, Groq LLM API, Generate Negative Prompt (experimental)"
         },
         {
             "author": "AI2lab",
@@ -6379,7 +6400,7 @@
             "description": "ComfyS3 seamlessly integrates with [a/Amazon S3](https://aws.amazon.com/en/s3/) in ComfyUI. This open-source project provides custom nodes for effortless loading and saving of images, videos, and checkpoint models directly from S3 buckets within the ComfyUI graph interface."
         },
         {
-            "author": "davask",
+            "author": "MaraScott",
             "title": "🐰 MaraScott Nodes",
             "id": "marascott-nodes",
             "reference": "https://github.com/MaraScott/ComfyUI_MaraScott_Nodes",
@@ -6387,7 +6408,7 @@
                 "https://github.com/MaraScott/ComfyUI_MaraScott_Nodes"
             ],
             "install_type": "git-clone",
-            "description": "A set of nodes including a universal bus, an Inpainting By Mask and a large Upscaler/Refiner\n[w/ComfyUI-MarasIT-Nodes has been changed to ComfyUI_MaraScott_Nodes. If you have previously installed ComfyUI-MarasIT-Nodes, Please uninstall the previous one and reinstall this.,\n!!! Deprecated Node will be removed sometime in June 2024. Please update your workflows !!!]"
+            "description": "A set of nodes including a universal bus, an Inpainting By Mask and a large Upscaler/Refiner\n[AnyBus,McInpainty,McBoaty]"
         },
         {
             "author": "yffyhk",
@@ -6551,6 +6572,17 @@
             ],
             "install_type": "git-clone",
             "description": "The Wav2Lip node is a custom node for ComfyUI that allows you to perform lip-syncing on videos using the Wav2Lip model. It takes an input video and an audio file and generates a lip-synced output video."
+        },
+        {
+            "author": "ShmuelRonen",
+            "title": "ComfyUI_Gemini_Flash",
+            "id": "gemini-flash",
+            "reference": "https://github.com/ShmuelRonen/ComfyUI_Gemini_Flash",
+            "files": [
+                "https://github.com/ShmuelRonen/ComfyUI_Gemini_Flash"
+            ],
+            "install_type": "git-clone",
+            "description": "ComfyUI_Gemini_Flash is a custom node for ComfyUI, integrating the capabilities of the Gemini 1.5 Flash model. This node supports text and vision-based prompts, allowing users to analyze and adapt images to text prompts for text2image tasks."
         },
         {
             "author": "redhottensors",
@@ -7520,14 +7552,13 @@
         },
         {
             "author": "daxcay",
-            "title": "ComfyUI-DRMN",
-            "id": "drmn",
-            "reference": "https://github.com/daxcay/ComfyUI-DRMN",
+            "title": "ComfyUI-DataSet",
+            "reference": "https://github.com/daxcay/ComfyUI-DataSet",
             "files": [
-                "https://github.com/daxcay/ComfyUI-DRMN"
+                "https://github.com/daxcay/ComfyUI-DataSet"
             ],
             "install_type": "git-clone",
-            "description": "Data Research And Manipulators Nodes for Model Trainers, Artists, Designers and Animators. Captions, Visualizer, Text Manipulator\nNOTE: This repo is renamed to ComfyUI-DataSet."
+            "description": "Data Research, Preparation And Manipulators Nodes for Model Trainers, Artists, Designers and Animators. Captions, Visualizer, Text Manipulator\nNOTE: This repo is renamed to ComfyUI-DataSet.\n[w/Repository name is renamed to ComfyUI-DataSet from ComfyUI-DRMN. Please, remove previous one and reinstall.]"
         },
         {
             "author": "daxcay",
@@ -8021,6 +8052,17 @@
             "description": "Use RetinaFace to detect and automatically crop faces."
         },
         {
+            "author": "liusida",
+            "title": "ComfyUI-SD3-nodes",
+            "id": "sd3-nodes",
+            "reference": "https://github.com/liusida/ComfyUI-SD3-nodes",
+            "files": [
+                "https://github.com/liusida/ComfyUI-SD3-nodes"
+            ],
+            "install_type": "git-clone",
+            "description": "Nodes that support Stable Diffusion 3 Medium better."
+        },
+        {
             "author": "jtydhr88",
             "title": "ComfyUI-Workflow-Encrypt",
             "id": "workflow-encrypt",
@@ -8193,6 +8235,17 @@
             ],
             "install_type": "git-clone",
             "description": "the comfyui custom node of [a/V-Express](https://github.com/tencent-ailab/V-Express) to make audio driven videos!"
+        },
+        {
+            "author": "AIFSH",
+            "title": "ComfyUI-MimicBrush",
+            "id": "mimicbrush",
+            "reference": "https://github.com/AIFSH/ComfyUI-MimicBrush",
+            "files": [
+                "https://github.com/AIFSH/ComfyUI-MimicBrush"
+            ],
+            "install_type": "git-clone",
+            "description": "a comfyui custom node for [a/MimicBrush](https://github.com/ali-vilab/MimicBrush),then inpainting with reference image."
         },
         {
             "author": "Koishi-Star",
@@ -10210,6 +10263,86 @@
             "install_type": "git-clone",
             "description": "A prompt generator and CLIP encoder using AI provided by Ollama."
         },
+        {
+            "author": "toxicwind",
+            "title": "TTools for ComfyUI",
+            "id": "ttools",
+            "reference": "https://github.com/toxicwind/ComfyUI-TTools",
+            "files": [
+                "https://github.com/toxicwind/ComfyUI-TTools"
+            ],
+            "install_type": "git-clone",
+            "description": "Text Randomization and Formatting, JSON Extraction and Processing, SD3 Resolution Solver"
+        },
+        {
+            "author": "Yanick112",
+            "title": "ComfyUI-ToSVG",
+            "id": "tosvg",
+            "reference": "https://github.com/Yanick112/ComfyUI-ToSVG",
+            "files": [
+                "https://github.com/Yanick112/ComfyUI-ToSVG"
+            ],
+            "install_type": "git-clone",
+            "description": "This project converts raster images into SVG format using the [a/VTracer](https://github.com/visioncortex/vtracer) library. It's a handy tool for designers and developers who need to work with vector graphics programmatically."
+        },
+        {
+            "author": "dicksondickson",
+            "title": "ComfyUI-Dickson-Nodes",
+            "id": "dicksonnodes",
+            "reference": "https://github.com/dicksondickson/ComfyUI-Dickson-Nodes",
+            "files": [
+                "https://github.com/dicksondickson/ComfyUI-Dickson-Nodes"
+            ],
+            "install_type": "git-clone",
+            "description": "Custom nodes for ComfyUI by DicksonDickson."
+        },
+        {
+            "author": "juehackr",
+            "title": "comfyui_fk_server",
+            "id": "fk-server",
+            "reference": "https://github.com/juehackr/comfyui_fk_server",
+            "files": [
+                "https://github.com/juehackr/comfyui_fk_server"
+            ],
+            "install_type": "git-clone",
+            "description": "🤗🤗🤗Comfyui Universal Translation Plugin (no longer requires adding various nodes, directly add translation function on the existing nodes), allowing Comfyui to support Chinese input and automatic translation for any long text input box, while adding error translation function (calling Baidu Translate), achieving translation freedom!"
+        },
+        {
+            "author": "G-370",
+            "title": "ComfyUI-SD3-Powerlab",
+            "id": "sd3-powerlab",
+            "reference": "https://github.com/G-370/ComfyUI-SD3-Powerlab",
+            "files": [
+                "https://github.com/G-370/ComfyUI-SD3-Powerlab"
+            ],
+            "install_type": "git-clone",
+            "description": "Nodes:Render SD3 Attention, SD3 Attention To Image, SD3 Image Into Attention."
+        },
+        {
+            "author": "TylerZoro",
+            "title": "SD3-Scaling",
+            "id": "sd3-scaling",
+            "reference": "https://github.com/TylerZoro/SD3-Scaling",
+            "files": [
+                "https://github.com/TylerZoro/SD3-Scaling"
+            ],
+            "install_type": "git-clone",
+            "description": "Tools for scaling images and latents appropriate to SD3 in ComfyUI."
+        },
+        {
+            "author": "baicai99",
+            "title": "ComfyUI-FrameSkipping",
+            "id": "FrameSkipping",
+            "reference": "https://github.com/baicai99/ComfyUI-FrameSkipping",
+            "files": [
+                "https://github.com/baicai99/ComfyUI-FrameSkipping"
+            ],
+            "install_type": "git-clone",
+            "description": "Used to process video redrawing, frame skipping, frame ending early, etc."
+        },
+        
+        
+        
         
         
 
